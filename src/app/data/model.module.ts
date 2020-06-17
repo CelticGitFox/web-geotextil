@@ -12,6 +12,7 @@ import {FileTypeData} from "./static/fileType.data";
 import {FileMultipleModel} from "./model/fileMultiple.model";
 import {CatalogueData} from "./static/Catalogue.data";
 import {CatalogueService} from "./services/catalogue.service";
+import {AuthService} from "./services/auth.service";
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import {CatalogueService} from "./services/catalogue.service";
     FileMultipleModel,
     CatalogueData,
     CatalogueService,
+    AuthService
   ]
 })
 export class ModelModule {

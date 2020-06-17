@@ -10,8 +10,10 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ModelModule} from './data/model.module';
-import {LoginModule} from './module/login/login.module';
-
+import {AuthModule} from "./module/auth/auth.module";
+import {AngularFireModule} from "@angular/fire";
+import {AngularFireAuthModule} from "@angular/fire/auth";
+import {environment} from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import {LoginModule} from './module/login/login.module';
     FormsModule,
     ReactiveFormsModule,
     ModelModule,
-    LoginModule,
+    AuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
     ToastrModule.forRoot({
       timeOut: 2000,
       positionClass: 'toast-top-right',

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "geotextil-76e41": {
+      "hosting": {
+        "geotextil": [
+          "geotextil-76e41"
+        ]
+      }
+    }
+  }
+}

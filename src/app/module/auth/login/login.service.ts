@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams, HttpHeaders} from '@angular/common/http';
-import {AppService, BASE_URL_API} from '../../app.service';
+import {AppService, BASE_URL_API} from '../../../app.service';
 import {Observable} from 'rxjs';
 import {BehaviorSubject} from 'rxjs';
 import {Router} from '@angular/router';

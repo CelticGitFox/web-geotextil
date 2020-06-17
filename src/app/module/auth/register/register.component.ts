@@ -1,18 +1,18 @@
 import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {LoginService} from './login.service';
-import {AuthService} from '../../system/auth/auth.service';
+// import {AuthService} from '../../../system/auth/auth.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {ToastrService} from 'ngx-toastr';
 import {Title} from "@angular/platform-browser";
+import {AuthService} from "../../../data/services/auth.service";
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.sass']
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.sass']
 })
-export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
+export class RegisterComponent implements OnInit, AfterViewInit, OnDestroy {
   private body: HTMLBodyElement = document.getElementsByTagName('body')[0];
   public model: any = {};
   public loading = false;
@@ -28,12 +28,10 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private loginService: LoginService,
     private _fb: FormBuilder,
     public spinner: NgxSpinnerService,
-    public _loginService: LoginService,
     public _toastr: ToastrService,
-    private authService: AuthService,
+    private _authService: AuthService
   ) {
     this.body.classList.remove('sidebar-mini');
     this.body.classList.add('login-page');
@@ -42,7 +40,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit() {
     this.getParameter();
     this.initForm();
-    this.authService.removeToken();
+    // this.authService.removeToken();
   }
 
   public async getParameter() {
@@ -76,30 +74,9 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   iniciarSesion() {
-    this.spinner.show();
-    this._loginService.login(this.form.value)
-      .subscribe(
-        res => {
-
-          this.authService.setAuth(res.token, this.form.controls.mail.value);
-          this.router.navigate(['/dashboard']);
-          // if (res.estado === 9) {
-          //   this._loginService.changeUser(this.form.controls.usuario.value);
-          //   localStorage.setItem('currentUser', JSON.stringify(res));
-          //   this.router.navigate(['/dashboard']);
-          // } else {
-          //   this._toastr.error('El usuario está pendiente de activación, por favor revise su correo electrónico.', 'Error!');
-          // }
-          this.spinner.hide();
-        },
-        err => {
-          if(err.status === 401) {
-            this._toastr.error('¡Credenciales invalidas!', 'Error!');
-          } else {
-            this._toastr.error('¡No hay conexión con el servidor, por favor intentarlo más tarde!', 'Error!');
-          }
-          this.spinner.hide();
-        });
+    const { mail, pass } = this.form.value;
+    const result = this._authService.register(mail, pass);
+    console.log(result);
   }
 
   public checkEvent(event) {
