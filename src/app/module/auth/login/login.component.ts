@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 // import {LoginService} from './login.service';
-// import {AuthService} from '../../../system/auth/auth.service';
+import {AuthUserService} from '../../../system/auth/authUser.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {ToastrService} from 'ngx-toastr';
@@ -32,7 +32,8 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
     private _fb: FormBuilder,
     public spinner: NgxSpinnerService,
     public _toastr: ToastrService,
-    private _authService: AuthService
+    private _authService: AuthService,
+    private _AuthUserService: AuthUserService
   ) {
     this.body.classList.remove('sidebar-mini');
     this.body.classList.add('login-page');
@@ -69,12 +70,15 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   async login() {
+    this.spinner.show();
     const { mail, pass } = this.form.value;
     const result = this._authService.login(mail, pass);
     console.log(result);
     const user = await this._authService.getCurrentUser()
-
-    console.log(result);
+    this._AuthUserService.setAuth(1234, this.form.controls.mail.value);
+    this.router.navigate(['/customer/procesos']);
+    console.log(user);
+    this.spinner.hide();
   }
 
   public checkEvent(event) {

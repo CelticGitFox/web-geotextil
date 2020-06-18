@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse} from '@angular/common/http';
 import {LoaderService} from '../../common/loader/loader.service';
-import {AuthService} from './auth.service';
+import {AuthUserService} from './authUser.service';
 import {Router} from '@angular/router';
 import {Observable, throwError} from 'rxjs';
 import {catchError, finalize, map} from 'rxjs/operators';
@@ -13,7 +13,7 @@ export class JwtInterceptor implements HttpInterceptor {
   constructor(
     public _spinner: NgxSpinnerService,
     // private loader: LoaderService,
-    private authService: AuthService,
+    private authService: AuthUserService,
     private router: Router
   ) {
   }

@@ -2,7 +2,7 @@
   <div id="content-wrapper" class="d-flex flex-column">
     <div id="content">
       <nav class="navbar navbar-expand-lg bg-white topbar mb-5 static-top shadow navStyle fixed-top">
-        <a class="navbar-brand" href="#">Logotipo</a>
+        <a class="navbar-brand"  [routerLink]="['/web']">Logotipo</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars" style="font-size:36px; color: #F01A33;"></i>
         </button>
@@ -10,11 +10,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav menuTextil">
             <li class="nav-item nav-border-not">
-              <a class="nav-link" href="#">NOSOTROS</a>
+              <a class="nav-link" href="#" [routerLink]="['/web']">INICIO</a>
             </li>
             <li class="nav-item nav-border-not">
-              <a class="nav-link" href="#">SERVICIOS</a>
+              <a class="nav-link" href="#" [routerLink]="['/web/nosotros']">NOSOTROS</a>
             </li>
+            <!--<li class="nav-item nav-border-not">-->
+              <!--<a class="nav-link" href="#">SERVICIOS</a>-->
+            <!--</li>-->
             <li class="nav-item nav-border-not">
               <a class="nav-link" href="#">BLOG</a>
             </li>

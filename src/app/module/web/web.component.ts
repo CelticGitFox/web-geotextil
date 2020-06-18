@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-configuracion',
-  templateUrl: './cargadatos.component.html',
-  styleUrls: ['./cargadatos.component.sass']
+  templateUrl: './web.component.html',
+  styleUrls: ['./web.component.sass']
 })
-export class CargadatosComponent implements OnInit {
+export class WebComponent implements OnInit {
 
   constructor() { }
 

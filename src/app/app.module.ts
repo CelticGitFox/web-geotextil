@@ -14,6 +14,8 @@ import {AuthModule} from "./module/auth/auth.module";
 import {AngularFireModule} from "@angular/fire";
 import {AngularFireAuthModule} from "@angular/fire/auth";
 import {environment} from "../environments/environment";
+import {WebModule} from "./module/web/web.module";
+import {CustomerModule} from "./module/customer/customer.module";
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import {environment} from "../environments/environment";
     ReactiveFormsModule,
     ModelModule,
     AuthModule,
+    WebModule,
+    CustomerModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     ToastrModule.forRoot({
