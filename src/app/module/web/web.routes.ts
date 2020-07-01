@@ -5,6 +5,9 @@ import {HomeComponent} from './home/home.component';
 import {AuthGuard} from '../../system/auth/auth.guard';
 import {AuthModule} from '../../system/auth/auth.module';
 import {NosotrosComponent} from "./nosotros/nosotros.component";
+import {RegistroComercioComponent} from "./registroComercio/registroComercio.component";
+import {BolsaTrabajoComponent} from "./bolsaTrabajo/bolsaTrabajo.component";
+import {MensajeriaComponent} from "./mensajeria/mensajeria.component";
 
 @NgModule({
   imports: [
@@ -16,6 +19,9 @@ import {NosotrosComponent} from "./nosotros/nosotros.component";
           {path: '', component: HomeComponent },
           {path: 'home', component: HomeComponent },
           {path: 'nosotros', component: NosotrosComponent },
+          {path: 'registro', component: RegistroComercioComponent },
+          {path: 'bolsa', component: BolsaTrabajoComponent },
+          {path: 'mensajeria', component: MensajeriaComponent },
         ]
       }
     ])

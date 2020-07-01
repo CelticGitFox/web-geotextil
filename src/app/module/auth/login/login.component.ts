@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-// import {LoginService} from './login.service';
+import {LoginService} from './login.service';
 import {AuthUserService} from '../../../system/auth/authUser.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {NgxSpinnerService} from 'ngx-spinner';
@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
     private _fb: FormBuilder,
     public spinner: NgxSpinnerService,
     public _toastr: ToastrService,
+    private _logService: LoginService,
     private _authService: AuthService,
     private _AuthUserService: AuthUserService
   ) {
