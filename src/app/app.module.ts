@@ -16,7 +16,6 @@ import {AngularFireAuthModule} from "@angular/fire/auth";
 import {environment} from "../environments/environment";
 import {WebModule} from "./module/web/web.module";
 import {CustomerModule} from "./module/customer/customer.module";
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
@@ -35,7 +34,6 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     CustomerModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFontAwesomeModule,
     ToastrModule.forRoot({
       timeOut: 2000,
       positionClass: 'toast-top-right',

@@ -1,3 +1,4 @@
+$negro: #212529
 svg
     fill: #fff
 
@@ -8,7 +9,7 @@ svg
 
 
 .scroll
-    height: 500px
+    height: 64vh
     overflow: hidden
     overflow-y: scroll
 
@@ -37,17 +38,30 @@ svg
     margin-left: auto
 
 .menu-lateral
-    width: 331px
+    width: 275px
     background-color: white
     height: 100%
-    position: absolute
+    position: fixed
     top: 0
     z-index: 5
 
 .items
-    background-color: #dc3545
-    padding: 1em
     color: white
+
+.list-geo
+    >li
+        padding: 1em
+        color: #212529
+        font-weight: 600
+        >svg
+            fill: $negro
+
+.active
+    background-color: #dc3545
+    color: white!important
+    font-weight: 600
+    >svg
+        fill: white!important
 
 .list-geo
     padding: 0
