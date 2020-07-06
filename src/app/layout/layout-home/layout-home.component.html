@@ -1,64 +1,64 @@
 <div id="wrapper">
-  <div id="content-wrapper" class="d-flex flex-column">
-    <div id="content">
-      <nav class="navbar navbar-expand-lg bg-white topbar mb-5 static-top shadow navStyle fixed-top">
-        <a class="navbar-brand"  [routerLink]="['/web']">Logotipo</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <nav class="navbar navbar-expand-lg bg-white topbar mb-5 static-top shadow navStyle fixed-top">
+                <a class="navbar-brand" [routerLink]="['/web']">Logotipo</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars" style="font-size:36px; color: #F01A33;"></i>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav menuTextil">
-            <li class="nav-item nav-border-not">
-              <a class="nav-link" href="#" [routerLink]="['/web']">INICIO</a>
-            </li>
-            <!--<li class="nav-item nav-border-not">-->
-              <!--<a class="nav-link" href="#" [routerLink]="['/web/nosotros']">NOSOTROS</a>-->
-            <!--</li>-->
-            <li class="nav-item nav-border-not">
-              <a class="nav-link" href="#" [routerLink]="['/web/registro']">REGISTRO</a>
-            </li>
-            <li class="nav-item nav-border-not">
-              <a class="nav-link" href="#" [routerLink]="['/web/mensajeria']">MENSAJERÍA</a>
-            </li>
-            <li class="nav-item nav-border-not">
-              <a class="nav-link" href="#" [routerLink]="['/web/bolsa']">BOLSA DE TRABAJO</a>
-            </li>
-            <!--<li class="nav-item nav-border-not">-->
-              <!--<a class="nav-link" href="#">SERVICIOS</a>-->
-            <!--</li>-->
-            <li class="nav-item nav-border">
-              <a class="nav-link font-weight-bold" [routerLink]="['/auth/register']">REGISTRARSE</a>
-            </li>
-            <li class="nav-item nav-border2">
-              <a class="nav-link text-white font-weight-bold" [routerLink]="['/auth/login']">INGRESAR</a>
-            </li>
-          </ul>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav menuTextil">
+                        <li class="nav-item nav-border-not">
+                            <a class="nav-link" href="#" [routerLink]="['/web']">INICIO</a>
+                        </li>
+                        <!--<li class="nav-item nav-border-not">-->
+                        <!--<a class="nav-link" href="#" [routerLink]="['/web/nosotros']">NOSOTROS</a>-->
+                        <!--</li>-->
+                        <li class="nav-item nav-border-not">
+                            <a class="nav-link" href="#" [routerLink]="['/web/registro']">REGISTRO</a>
+                        </li>
+                        <li class="nav-item nav-border-not">
+                            <a class="nav-link" href="#" [routerLink]="['/web/mensajeria']">MENSAJERÍA</a>
+                        </li>
+                        <li class="nav-item nav-border-not">
+                            <a class="nav-link" href="#" [routerLink]="['/web/bolsa']">BOLSA DE TRABAJO</a>
+                        </li>
+                        <!--<li class="nav-item nav-border-not">-->
+                        <!--<a class="nav-link" href="#">SERVICIOS</a>-->
+                        <!--</li>-->
+                        <li class="nav-item ">
+                            <a class="nav-link font-weight-bold nav-border" [routerLink]="['/auth/register']">REGISTRARSE</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-white font-weight-bold nav-border2" [routerLink]="['/auth/login']">INGRESAR</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="marginHeader"></div>
+            <router-outlet></router-outlet>
         </div>
-      </nav>
-      <div class="marginHeader"></div>
-      <router-outlet></router-outlet>
     </div>
-  </div>
 </div>
 <!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
+<!-- <a class="scroll-to-top rounded" href="#page-top">
   <i class="fas fa-angle-up"></i>
-</a>
+</a> -->
 <script>
-  $(document).ready(function() {
-    $(window).resize(function(){
-      if ($(window).width() >= 980){
+    $(document).ready(function() {
+        $(window).resize(function() {
+            if ($(window).width() >= 980) {
 
-        $(".navbar .dropdown-toggle").hover(function () {
-          $(this).parent().toggleClass("show");
-          $(this).parent().find(".dropdown-menu").toggleClass("show");
-        });
+                $(".navbar .dropdown-toggle").hover(function() {
+                    $(this).parent().toggleClass("show");
+                    $(this).parent().find(".dropdown-menu").toggleClass("show");
+                });
 
-        $( ".navbar .dropdown-menu" ).mouseleave(function() {
-          $(this).removeClass("show");
+                $(".navbar .dropdown-menu").mouseleave(function() {
+                    $(this).removeClass("show");
+                });
+            }
         });
-      }
     });
-  });
 </script>
