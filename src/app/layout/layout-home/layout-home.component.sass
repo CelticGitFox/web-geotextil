@@ -1,6 +1,9 @@
+a:hover
+  text-decoration: none
+
 .navbar .dropdown-menu
   div[class*="col"]
-    margin-bottom: 1rem
+  margin-bottom: 1rem
 
   border: none
   background-color: #0060c8 !important
@@ -68,3 +71,71 @@
 .nav-border-not
   padding-top: 14px
   padding-bottom: 14px
+
+
+// menu
+
+.menu-lateral
+  min-width: 275px
+  background-color: white
+  height: 100vh
+  // position: fixed
+  // top: 0
+  z-index: 5
+
+$negro: #212529
+svg
+  fill: #fff
+
+.menu-lateral
+  min-width: 275px
+  background-color: white
+  height: 100vh
+  // position: fixed
+  // top: 0
+  z-index: 5
+
+.active
+  background-color: #dc3545
+  color: white!important
+  font-weight: 600
+  >svg
+    fill: white!important
+
+.list-geo
+  padding: 0
+  margin: 0
+  >a
+    >li
+      color: $negro
+      transition: all .3s ease
+      >svg
+        fill: $negro
+
+.list-geo
+  a:hover li
+    color: #fff
+    background-color: #dc3545 !important
+    >svg
+      fill: white
+    
+.user-img
+  width: 23%
+
+@media (max-width: 767px)
+  .user-chat
+    height: 200px
+    overflow-y: scroll
+  .user-img
+    width: 10%
+
+@media (max-width: 1078px)
+  .menu-lateral
+    display: none
+    
+  .display-menu
+    display: block!important
+
+    // .sm-full-col
+    //     flex: 0 0 100%!important
+    //     max-width: 100%!important

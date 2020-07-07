@@ -6,6 +6,11 @@ svg
     grid-template-columns: 1fr 1fr
     align-items: center
 
+.scroll
+    height: 100vh
+    overflow: hidden
+    overflow-y: scroll
+
 .slide
     object-fit: cover
     height: 215px
@@ -25,3 +30,7 @@ svg
 
 .active
     background-color: red
+
+@media (max-width: 1078px)
+    .menu-rojo
+        display: none!important
