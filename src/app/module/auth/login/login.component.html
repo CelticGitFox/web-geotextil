@@ -1,53 +1,39 @@
-<div class="limiter">
-  <div class="container-login100" style="background-image: url('../../../assets/img/backgroundlogin.png');">
+<div class="">
+  <div class="container-login100">
     <div class="wrap-login100 p-t-30 p-b-50">
       <form class="login100-form validate-form">
         <div class="row"[formGroup]="form">
           <div class="col-12 back-white p-10">
+            Correo
             <mat-form-field appearance="outline">
-              <mat-label>Correo eléctronico</mat-label>
               <input type="text"
                      matInput
                      (ngModelChange)="validarMail()"
-                     placeholder="Correo eléctronico"
                      [ngClass]="{'border-error': (form.get('mail').hasError('email') || form.get('mail').hasError('required')) && validMail}"
                      formControlName="mail"
               >
             </mat-form-field>
           </div>
           <div class="col-12 back-white p-10">
-              <mat-form-field appearance="outline">
-                <mat-label>Contraseña</mat-label>
-                <input type="password"
-                       matInput
-                       placeholder="Contraseña"
-                       [ngClass]="{'border-error': (form.get('pass').hasError('minlength') || form.get('pass').hasError('maxlength') || form.get('pass').hasError('required')) && validPass}"
-                       (keydown)="checkEvent($event);"
-                       formControlName="pass"
-                >
-                <mat-icon matSuffix>remove_red_eye</mat-icon>
-              </mat-form-field>
-          </div>
-          <div class="col-12 back-white pb-3 p-10 olvidaste">
-            ¿ <a class="font-14 text-decoration-u" href="">Olvidaste tu contraseña</a> ?
+            Contraseña
+            <mat-form-field appearance="outline">
+              <input type="password"
+                     matInput
+                     [ngClass]="{'border-error': (form.get('pass').hasError('minlength') || form.get('pass').hasError('maxlength') || form.get('pass').hasError('required')) && validPass}"
+                     (keydown)="checkEvent($event);"
+                     formControlName="pass"
+              >
+              <mat-icon matSuffix>remove_red_eye</mat-icon>
+            </mat-form-field>
           </div>
           <div class="col-12 back-white p-10 ingresar">
             <button type="button" [disabled]="!form.valid" class="btn btn-primary btn-agregar width-100" (click)="login();">Ingresar</button>
-          </div>
-          <div class="col-12 back-white p-25 text-center">
-            <span class="font-14 mt-2"><a [routerLink]="['/auth/register']">¿Aún no te haz registrado? Únete aquí</a></span>
-          </div>
-          <div class="col-12 text-center back-white p-25">
-            <img src="../../../assets/img/perfil/facebook.png" width="50" height="50">
-          </div>
-          <div class="col-12 back-white p-25 text-center">
-            <span class="font-14 mt-2"><a href="#">¿Tienes problemas para iniciar sesión?</a></span>
           </div>
         </div>
       </form>
     </div>
     <div class="footer">
-      <span class="font-40">&#169;</span><span class="font-14">&nbsp; 2020 ELECTROUCAYALI S.A. | Todos los derechos reservados</span>
+      <span class="font-40">&#169;</span><span class="font-14">&nbsp; 2020 GeoTextil | Todos los derechos reservados</span>
     </div>
   </div>
 </div>

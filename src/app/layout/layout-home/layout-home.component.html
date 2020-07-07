@@ -8,32 +8,37 @@
         </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav menuTextil">
-                        <li class="nav-item nav-border-not">
-                            <a class="nav-link" href="#" [routerLink]="['/web']">INICIO</a>
-                        </li>
-                        <!--<li class="nav-item nav-border-not">-->
-                        <!--<a class="nav-link" href="#" [routerLink]="['/web/nosotros']">NOSOTROS</a>-->
-                        <!--</li>-->
-                        <li class="nav-item nav-border-not">
-                            <a class="nav-link" href="#" [routerLink]="['/web/registro']">REGISTRO</a>
-                        </li>
-                        <li class="nav-item nav-border-not">
-                            <a class="nav-link" href="#" [routerLink]="['/web/mensajeria']">MENSAJERÍA</a>
-                        </li>
-                        <li class="nav-item nav-border-not">
-                            <a class="nav-link" href="#" [routerLink]="['/web/bolsa']">BOLSA DE TRABAJO</a>
-                        </li>
-                        <!--<li class="nav-item nav-border-not">-->
-                        <!--<a class="nav-link" href="#">SERVICIOS</a>-->
-                        <!--</li>-->
-                        <li class="nav-item ">
-                            <a class="nav-link font-weight-bold nav-border" [routerLink]="['/auth/register']">REGISTRARSE</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link text-white font-weight-bold nav-border2" [routerLink]="['/auth/login']">INGRESAR</a>
-                        </li>
-                    </ul>
+                  <ul class="navbar-nav menuTextil" *ngIf="!user">
+                    <li class="nav-item nav-border-not">
+                      <a class="nav-link" href="#" [routerLink]="['/web']">INICIO</a>
+                    </li>
+                    <!--<li class="nav-item nav-border-not">-->
+                    <!--<a class="nav-link" href="#" [routerLink]="['/web/nosotros']">NOSOTROS</a>-->
+                    <!--</li>-->
+                    <li class="nav-item nav-border-not">
+                      <a class="nav-link" href="#" [routerLink]="['/web/registro']">REGISTRO</a>
+                    </li>
+                    <li class="nav-item nav-border-not">
+                      <a class="nav-link" href="#" [routerLink]="['/web/mensajeria']">MENSAJERÍA</a>
+                    </li>
+                    <li class="nav-item nav-border-not">
+                      <a class="nav-link" href="#" [routerLink]="['/web/bolsa']">BOLSA DE TRABAJO</a>
+                    </li>
+                    <!--<li class="nav-item nav-border-not">-->
+                    <!--<a class="nav-link" href="#">SERVICIOS</a>-->
+                    <!--</li>-->
+                    <li class="nav-item nav-border">
+                      <a class="nav-link font-weight-bold" [routerLink]="['/auth/register']">REGISTRARSE</a>
+                    </li>
+                    <li class="nav-item nav-border2">
+                      <a class="nav-link text-white font-weight-bold" [routerLink]="['/auth/login']">INGRESAR</a>
+                    </li>
+                  </ul>
+                  <ul class="navbar-nav menuTextil" *ngIf="user">
+                    <li class="nav-item nav-border2">
+                      <a class="nav-link text-white font-weight-bold" (click)="logout()">Cerrar sesión</a>
+                    </li>
+                  </ul>
                 </div>
             </nav>
             <div class="marginHeader"></div>

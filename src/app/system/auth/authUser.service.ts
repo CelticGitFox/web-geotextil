@@ -25,7 +25,7 @@ export class AuthUserService {
     return localStorage.getItem('user');
   }
 
-  public cerrarSesion() {
+  public logout() {
     localStorage.clear();
   }
 }

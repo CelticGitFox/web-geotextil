@@ -7,6 +7,7 @@ import {NgxSpinnerService} from 'ngx-spinner';
 import {ToastrService} from 'ngx-toastr';
 import {Title} from "@angular/platform-browser";
 import {AuthService} from "../../../data/services/auth.service";
+import {UserService} from "../../../data/services/user.service";
 
 @Component({
   selector: 'app-login',
@@ -34,7 +35,8 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
     public _toastr: ToastrService,
     private _logService: LoginService,
     private _authService: AuthService,
-    private _AuthUserService: AuthUserService
+    private _AuthUserService: AuthUserService,
+    private _usersService: UserService
   ) {
     this.body.classList.remove('sidebar-mini');
     this.body.classList.add('login-page');
@@ -73,12 +75,23 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
   async login() {
     this.spinner.show();
     const { mail, pass } = this.form.value;
-    const result = this._authService.login(mail, pass);
-    console.log(result);
-    const user = await this._authService.getCurrentUser()
-    this._AuthUserService.setAuth(1234, this.form.controls.mail.value);
-    this.router.navigate(['/customer/procesos']);
-    console.log(user);
+    const result = this._authService.login(mail, pass)
+      .then(
+        async (data) => {
+          if (data) {
+            const user = await this._authService.getCurrentUser()
+            console.log(user.uid)
+            this._AuthUserService.setAuth(user.uid, user.email);
+            this.router.navigate(['/customer/procesos']);
+          } else {
+
+          }
+        }
+      )
+      .catch(err => console.log(err));
+    // console.log(result);
+
+    // console.log(user);
     this.spinner.hide();
   }
 

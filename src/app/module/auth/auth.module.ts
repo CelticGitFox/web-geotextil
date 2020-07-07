@@ -10,6 +10,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {Register} from "ts-node";
 import {RegisterComponent} from "./register/register.component";
+import {LoginService} from "./login/login.service";
 
 @NgModule({
   declarations: [AuthComponent, LoginComponent, RegisterComponent ],
@@ -23,7 +24,8 @@ import {RegisterComponent} from "./register/register.component";
     MatInputModule
   ],
   providers: [
-    Md5
+    Md5,
+    LoginService
   ]
 })
 export class AuthModule { }
