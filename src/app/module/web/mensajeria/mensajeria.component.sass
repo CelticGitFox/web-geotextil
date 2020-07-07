@@ -9,9 +9,13 @@ svg
 
 
 .scroll
-    height: 64vh
+    height: 100vh
     overflow: hidden
     overflow-y: scroll
+
+.chat
+    overflow-y: scroll
+    height: 66vh
 
 .border-top-0
     border-top-right-radius: 0px!important
@@ -31,18 +35,18 @@ svg
     width: 75%
 
 .punto
-    width: 15px
-    height: 15px
+    min-width: 15px
+    min-height: 15px
     background: #dc3545
     border-radius: 50%
     margin-left: auto
 
 .menu-lateral
-    width: 275px
+    min-width: 275px
     background-color: white
-    height: 100%
-    position: fixed
-    top: 0
+    height: 100vh
+    // position: fixed
+    // top: 0
     z-index: 5
 
 .items
@@ -68,3 +72,18 @@ svg
     margin: 0
     >li
         list-style: none
+.user-img
+    width: 23%
+@media (max-width: 767px)
+    .user-chat
+        height: 200px
+        overflow-y: scroll
+    .user-img
+        width: 10%
+
+@media (max-width: 1078px)
+    .menu-lateral
+        display: none
+    // .sm-full-col
+    //     flex: 0 0 100%!important
+    //     max-width: 100%!important
