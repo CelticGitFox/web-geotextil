@@ -20,6 +20,7 @@ export class LayoutHomeComponent implements OnInit {
 
   ngOnInit() {
     this.user = this._AuthUserService.getUser();
+    console.log(this.user)
   }
 
   public logout () {
