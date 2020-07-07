@@ -1,0 +1,89 @@
+$negro: #212529
+svg
+    fill: #fff
+
+.grid-elements
+    display: grid
+    grid-template-columns: 1fr 1fr
+    align-items: center
+
+
+.scroll
+    height: 100vh
+    overflow: hidden
+    overflow-y: scroll
+
+.chat
+    overflow-y: scroll
+    height: 66vh
+
+.border-top-0
+    border-top-right-radius: 0px!important
+    border-top-left-radius: 0px!important
+
+.chat-img
+    width: 200px
+    height: 100px
+    object-fit: cover
+
+.burbuja
+    margin-left: auto
+    width: 75%
+
+.bombom
+    margin-righ: auto
+    width: 75%
+
+.punto
+    min-width: 15px
+    min-height: 15px
+    background: #dc3545
+    border-radius: 50%
+    margin-left: auto
+
+.menu-lateral
+    min-width: 275px
+    background-color: white
+    height: 100vh
+    // position: fixed
+    // top: 0
+    z-index: 5
+
+.items
+    color: white
+
+.list-geo
+    >li
+        padding: 1em
+        color: #212529
+        font-weight: 600
+        >svg
+            fill: $negro
+
+.active
+    background-color: #dc3545
+    color: white!important
+    font-weight: 600
+    >svg
+        fill: white!important
+
+.list-geo
+    padding: 0
+    margin: 0
+    >li
+        list-style: none
+.user-img
+    width: 23%
+@media (max-width: 767px)
+    .user-chat
+        height: 200px
+        overflow-y: scroll
+    .user-img
+        width: 10%
+
+@media (max-width: 1078px)
+    .menu-lateral
+        display: none
+    // .sm-full-col
+    //     flex: 0 0 100%!important
+    //     max-width: 100%!important

@@ -7,6 +7,8 @@ import {AuthModule} from '../../system/auth/auth.module';
 import {ProfileComponent} from "./profile/profile.component";
 import {JobsComponent} from "./jobs/jobs.component";
 import {MessageComponent} from "./message/message.component";
+import {BolsaTrabajoComponent} from "../web/bolsaTrabajo/bolsaTrabajo.component";
+import {MensajeriaComponent} from "../web/mensajeria/mensajeria.component";
 
 @NgModule({
   imports: [
@@ -18,8 +20,8 @@ import {MessageComponent} from "./message/message.component";
           {path: '', component: ProcesosComponent },
           {path: 'procesos', component: ProcesosComponent },
           {path: 'perfil', component: ProfileComponent },
-          {path: 'bolsaDeTrabajo', component: JobsComponent },
-          {path: 'Mensajeria', component: MessageComponent },
+          {path: 'bolsa', component: BolsaTrabajoComponent },
+          {path: 'mensajeria', component: MensajeriaComponent },
         ]
       }
     ])

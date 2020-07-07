@@ -82,7 +82,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
             const user = await this._authService.getCurrentUser()
             console.log(user.uid)
             this._AuthUserService.setAuth(user.uid, user.email);
-            this.router.navigate(['/customer/procesos']);
+            this.router.navigate(['/customer/mensajeria']);
           } else {
 
           }
