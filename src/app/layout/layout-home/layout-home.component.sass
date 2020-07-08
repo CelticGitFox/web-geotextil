@@ -3,7 +3,6 @@ a:hover
 #page-top
   margin-top: 70px!important
 .navbar .dropdown-menu
-  div[class*="col"]
   margin-bottom: 1rem
 
   border: none
@@ -80,8 +79,8 @@ a:hover
   min-width: 275px
   background-color: white
   height: 100vh
-  // position: fixed
-  // top: 0
+  position: fixed
+  top: 0
   z-index: 5
 
 $negro: #212529
@@ -119,9 +118,14 @@ svg
     background-color: #dc3545 !important
     >svg
       fill: white
-    
+
 .user-img
   width: 23%
+
+.router
+  width: 100%
+  margin-left: 275px !important
+  margin-right: 0px !important
 
 @media (max-width: 767px)
   .user-chat
@@ -129,11 +133,15 @@ svg
     overflow-y: scroll
   .user-img
     width: 10%
+  .router
+    width: 100%
+    margin-left: 0px !important
+    margin-right: 0px !important
 
 @media (max-width: 1078px)
   .menu-lateral
     display: none
-    
+
   .display-menu
     display: block!important
 

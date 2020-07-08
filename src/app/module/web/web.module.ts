@@ -5,7 +5,7 @@ import { WebRoutes } from './web.routes';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HomeComponent} from './home/home.component';
 import {Md5} from "ts-md5";
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [WebComponent, HomeComponent ],
@@ -13,10 +13,11 @@ import {Md5} from "ts-md5";
     WebRoutes,
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CarouselModule
   ],
   providers: [
     Md5
-  ]
+  ],
 })
 export class WebModule { }
