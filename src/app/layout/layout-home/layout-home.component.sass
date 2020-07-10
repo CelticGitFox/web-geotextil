@@ -40,7 +40,7 @@ a:hover
     justify-content: flex-end
 
   .nav-link
-    color: #000000
+    color: #333333
 
 @media screen and (max-width: 990px)
   .navbar-collapse
@@ -57,16 +57,18 @@ a:hover
 
 .nav-border
   border: 1px solid #F01A33
-  padding-top: 14px
-  padding-bottom: 14px
+  padding-top: 12px
+  padding-bottom: 12px
 
 .nav-border2
-  border: 1px solid #F01A33
-  padding-top: 14px
-  padding-bottom: 14px
+  width: 128px
+  text-align: center
+  padding-top: 12px
+  padding-bottom: 12px
   padding-right: 20px
   padding-left: 20px
-  background-color: #F01A33
+  background-color: #ED1C24
+  background-image: linear-gradient(to right, #8F0001 , #ED1C24)
 
 .nav-border-not
   padding-top: 14px
@@ -137,6 +139,9 @@ svg
     width: 100%
     margin-left: 0px !important
     margin-right: 0px !important
+  .navStyle
+    padding-right: 5px
+    padding-left: 5px
 
 @media (max-width: 1078px)
   .menu-lateral
@@ -148,3 +153,18 @@ svg
     // .sm-full-col
     //     flex: 0 0 100%!important
     //     max-width: 100%!important
+
+.active-link
+  background-color: #ED1C24
+  background-image: linear-gradient(to right, #8F0001 , #ED1C24)
+  height: 100%
+
+.active-link .nav-link
+  color: #ffffff
+
+.container-outlet
+  margin-top: 10vh
+
+@media (min-width: 1400px)
+  .container-outlet
+    margin-top: 7vh

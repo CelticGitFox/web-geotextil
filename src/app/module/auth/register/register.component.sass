@@ -4,7 +4,7 @@
 
 .container-login100
   width: 100%
-  min-height: 100vh
+  min-height: 90vh
   display: -webkit-box
   display: -webkit-flex
   display: -moz-box
@@ -89,7 +89,7 @@
   background-color: #ffffff
 
 .p-10
-  padding: 5px 50px 5px 50px
+  padding: 2px 80px 5px 80px
 
 .p-25
   padding: 25px 50px 5px 50px
@@ -116,11 +116,14 @@ a
   font-weight: bold
   line-height: 28px
 
-.font-14
-  font-size: 14px
+.font-12
+  font-size: 12px
 
 .width-100
-  width: 50%
+  width: 70%
+  padding: 30px
+  background-color: #ED1C24
+  background-image: linear-gradient(to right, #8F0001 , #ED1C24) !important
 
 .text-decoration-u
   text-decoration: underline
@@ -142,10 +145,10 @@ a
   bottom: 0px
 
 .font-40
-  font-size: 32px
+  font-size: 20px
 
 .border-error
-  border: 1px solid #ef0135
+//border: 1px solid #ef0135
 
 .modal-backdrop
   background-color: transparent !important
@@ -157,3 +160,14 @@ a
 .ingresar
   display: flex
   justify-content: center
+
+@media (min-width: 1500px)
+  .container-login100
+    min-height: 93vh
+
+.title-inicio
+  background-color: #F01A33
+  padding: 10px
+
+.mat-form-field-appearance-outline .mat-form-field-prefix, .mat-form-field-appearance-outline .mat-form-field-suffix
+  top: -.25em !important

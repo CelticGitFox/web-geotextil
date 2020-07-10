@@ -11,9 +11,10 @@ import {MatInputModule} from "@angular/material/input";
 import {Register} from "ts-node";
 import {RegisterComponent} from "./register/register.component";
 import {LoginService} from "./login/login.service";
+import {RecoverComponent} from "./recover/recover.component";
 
 @NgModule({
-  declarations: [AuthComponent, LoginComponent, RegisterComponent ],
+  declarations: [AuthComponent, LoginComponent, RegisterComponent, RecoverComponent ],
   imports: [
     AuthRoutes,
     CommonModule,

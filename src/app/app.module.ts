@@ -35,7 +35,7 @@ import {CustomerModule} from "./module/customer/customer.module";
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     ToastrModule.forRoot({
-      timeOut: 2000,
+      timeOut: 3000,
       positionClass: 'toast-top-right',
       preventDuplicates: true,
       closeButton: true

@@ -2,17 +2,23 @@
      <!-- Para los que no son usuarios -->
     <div class="display-menu" *ngIf="!user">
         <nav class="navbar navbar-expand-lg bg-white topbar mb-5 static-top shadow navStyle fixed-top">
-            <a class="navbar-brand" [routerLink]="['/web']">Logotipo</a>
+            <img src="assets/img/logo.svg" style=" height: 68px" alt="logo GeoTextil">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <i class="fa fa-bars" style="font-size:36px; color: #F01A33;"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav menuTextil" *ngIf="!user">
-                    <li class="nav-item nav-border-not">
-                        <a class="nav-link" href="#" [routerLink]="['/web']">INICIO</a>
+                    <li class="nav-item nav-border-not" routerLinkActive="active-link">
+                        <a class="nav-link" href="#" [routerLink]="['/web/home']">INICIO</a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item nav-border-not" routerLinkActive="active-link">
+                        <a class="nav-link" href="#" [routerLink]="['/web/nosotros']">NOSOTROS</a>
+                    </li>
+                    <li class="nav-item nav-border-not" routerLinkActive="active-link">
+                        <a class="nav-link" href="#" [routerLink]="['/web/bolsa']">CATEGORIAS</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link font-weight-bold nav-border" [routerLink]="['/auth/register']">REGISTRARSE</a>
                     </li>
                     <li class="nav-item">
@@ -77,7 +83,7 @@
     </div>
     <div class="row" style="display: contents;">
       <div class="menu-lateral shadow" *ngIf="user">
-        <div class="p-2"><img src="assets/img/logo.svg" alt=""></div>
+        <a class="navbar-brand" [routerLink]="['/web']"><div class="p-2"><img src="assets/img/logo.svg" alt=""></div></a>
         <div class="items">
           <ul class="list-geo">
             <a [routerLink]="['/web/registro']" class="text-white">
@@ -109,7 +115,7 @@
           </ul>
         </div>
       </div>
-      <div style="width: 100%;" *ngIf="!user">
+      <div style="width: 100%;" class="container-outlet" *ngIf="!user">
         <router-outlet></router-outlet>
       </div>
       <div style="width: 100%;" *ngIf="user" class="router">

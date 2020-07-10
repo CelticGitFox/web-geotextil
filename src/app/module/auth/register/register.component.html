@@ -1,42 +1,20 @@
-<div class="limiter">
-  <div class="container-login100">
+<div class="">
+  <div class="container-login100" style="background-image: url('../../../assets/img/fondoLogin.png');">
     <div class="wrap-login100 p-t-30 p-b-50">
-      <form class="login100-form validate-form">
-        <div class="row"[formGroup]="form">
-          <div class="col-12 back-white p-10">
-            <mat-form-field appearance="outline">
-              <mat-label>Correo eléctronico</mat-label>
-              <input type="text"
-                     matInput
-                     (ngModelChange)="validarMail()"
-                     placeholder="Correo eléctronico"
-                     [ngClass]="{'border-error': (form.get('mail').hasError('email') || form.get('mail').hasError('required')) && validMail}"
-                     formControlName="mail"
-              >
-              <mat-icon matSuffix>remove_red_eye</mat-icon>
-            </mat-form-field>
-          </div>
-          <div class="col-12 back-white p-10">
-              <mat-form-field appearance="outline">
-                <mat-label>Contraseña</mat-label>
-                <input type="password"
-                       matInput
-                       placeholder="Contraseña"
-                       [ngClass]="{'border-error': (form.get('pass').hasError('minlength') || form.get('pass').hasError('maxlength') || form.get('pass').hasError('required')) && validPass}"
-                       (keydown)="checkEvent($event);"
-                       formControlName="pass"
-                >
-                <mat-icon matSuffix>remove_red_eye</mat-icon>
-              </mat-form-field>
-          </div>
-          <div class="col-12 back-white p-10 ingresar">
-            <button type="button" [disabled]="!form.valid" class="btn btn-primary btn-agregar width-100" (click)="iniciarSesion();">Registrar</button>
-          </div>
+      <div class="col-12 text-center title-inicio gradiante">
+        <span class="text-white">REGISTRARSE</span>
+      </div>
+      <div class="row" style="padding: 60px; background-color: #ffffff">
+        <div class="col-12 p-10 ingresar">
+          <button type="button" [disabled]="!form.valid" class="btn btn-primary width-100" (click)="login();">Usuario</button>
         </div>
-      </form>
+        <div class="col-12 p-10 ingresar">
+          <button type="button" [disabled]="!form.valid" class="btn btn-primary width-100" (click)="login();">Comercio</button>
+        </div>
+      </div>
     </div>
     <div class="footer">
-      <span class="font-40">&#169;</span><span class="font-14">&nbsp; 2020 GeoTextil | Todos los derechos reservados</span>
+      <span class="font-40">&#169;</span><span class="font-12">&nbsp; 2020 GeoTextil | Todos los derechos reservados</span>
     </div>
   </div>
 </div>

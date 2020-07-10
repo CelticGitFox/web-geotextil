@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {LoginService} from './login.service';
+import {LoginService} from '../login/login.service';
 import {AuthUserService} from '../../../system/auth/authUser.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {NgxSpinnerService} from 'ngx-spinner';
@@ -10,11 +10,11 @@ import {AuthService} from "../../../data/services/auth.service";
 import {UserService} from "../../../data/services/user.service";
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.sass']
+  selector: 'app-recover',
+  templateUrl: './recover.component.html',
+  styleUrls: ['./recover.component.sass']
 })
-export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
+export class RecoverComponent implements OnInit, AfterViewInit, OnDestroy {
   private body: HTMLBodyElement = document.getElementsByTagName('body')[0];
   public model: any = {};
   public loading = false;
@@ -50,7 +50,6 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
   public initForm() {
     this.form = this._fb.group({
       mail: [null, Validators.compose([Validators.required, Validators.maxLength(50), Validators.email])],
-      pass: [null, Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(30)])]
     });
   }
 
@@ -72,21 +71,16 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
     this.body.classList.add('sidebar-mini');
   }
 
-  async login() {
+  async recover() {
     this.spinner.show();
-    const { mail, pass } = this.form.value;
-    const result = this._authService.login(mail, pass)
+    const { mail } = this.form.value;
+    const result = this._authService.recover(mail)
       .then(
         async (data) => {
-          if (data) {
-            console.log(1);
-            const user = await this._authService.getCurrentUser()
-            this._AuthUserService.setAuth(user.uid, user.email);
-            this.router.navigate(['/customer/mensajeria']);
-          } else {
-            this._toastr.error('¡Correo o Contraseña invalidas, por favor intentar de nuevo!', 'Error!');
-          }
+          console.log(data);
+          this._toastr.success('Se ha enviado un correo a su cuenta. Por favor sigue los pasos indicados.', 'Error!');
           this.spinner.hide();
+          this.router.navigate(['/auth/login']);
         }
       )
       .catch(err => {
@@ -95,21 +89,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
       });
   }
 
-  public checkEvent(event) {
-    if (event.key === 'Enter' && this.form.valid) {
-      this.login();
-    }
-  }
-
-  public validarPass() {
-    this.validPass = true;
-  }
-
   public validarMail() {
     this.validMail = true;
-  }
-
-  public changeType() {
-    this.typePass = (this.typePass === "password") ? "text" : "password";
   }
 }

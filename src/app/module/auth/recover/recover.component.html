@@ -2,7 +2,7 @@
   <div class="container-login100" style="background-image: url('../../../assets/img/fondoLogin.png');">
     <div class="wrap-login100 p-t-30 p-b-50">
       <div class="col-12 text-center title-inicio gradiante">
-        <span class="text-white">INICIO DE SESIÓN</span>
+        <span class="text-white">RECUPERAR CONTRASEÑA</span>
       </div>
       <form class="login100-form validate-form">
         <div class="row"[formGroup]="form" style="width: 100%">
@@ -18,24 +18,11 @@
               >
             </mat-form-field>
           </div>
-          <div class="col-12 back-white p-10">
-            <mat-form-field appearance="outline">
-              <mat-label>Contraseña</mat-label>
-              <input [type]="typePass"
-                     matInput
-                     [ngClass]="{'border-error': (form.get('pass').hasError('minlength') || form.get('pass').hasError('maxlength') || form.get('pass').hasError('required')) && validPass}"
-                     (keydown)="checkEvent($event);"
-                     formControlName="pass"
-                     placeholder="Ingresar Contaseña"
-              >
-              <mat-icon matSuffix style="margin-right: 10px;" (click)="changeType()"><img src="assets/icon/general/eye.svg" height="40"></mat-icon>
-            </mat-form-field>
-          </div>
           <div class="col-12 back-white pb-3 p-10 text-center">
-            <a class="font-12 colorSistems" [routerLink]="['/auth/recover']">¿Olvidaste tu contraseña?</a>
+            <a class="font-12 colorSistems" [routerLink]="['/auth/login']">¡Regresar a iniciar sesión!</a>
           </div>
           <div class="col-12 back-white p-10 ingresar">
-            <button type="button" [disabled]="!form.valid" class="btn btn-primary btn-agregar width-100" (click)="login();">Ingresar</button>
+            <button type="button" [disabled]="!form.valid" class="btn btn-primary btn-agregar width-100" (click)="recover();">RECUPERAR</button>
           </div>
           <div class="col-12 back-white pb-5 p-10 text-center">
             <a class="font-12 colorSistems" [routerLink]="['/auth/register']">¿Aún no te haz registrado? Únete aquí</a>

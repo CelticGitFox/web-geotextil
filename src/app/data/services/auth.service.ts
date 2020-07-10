@@ -21,7 +21,16 @@ export class AuthService {
     }
     catch (e) {
       console.log(e);
+    }
   }
+
+  async recover(email:string){
+    try{
+      return await this.afAuth.sendPasswordResetEmail(email);
+    }
+    catch (e) {
+      console.log(e);
+    }
   }
 
   async register(email:string, password:string){
