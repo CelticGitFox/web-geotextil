@@ -11,6 +11,7 @@ import { LayoutHomeComponent } from './layout/layout-home/layout-home.component'
       { path: '', redirectTo: 'web', pathMatch: 'full' },
       { path: 'auth', loadChildren: () => import('./module/auth/auth.module').then(m => m.AuthModule), component: LayoutHomeComponent },
       { path: 'web', loadChildren: () => import('./module/web/web.module').then(m => m.WebModule), component: LayoutHomeComponent },
+      { path: 'adm', loadChildren: () => import('./module/adm/adm.module').then(m => m.AdmModule), component: LayoutHomeComponent },
       { path: 'customer', loadChildren: () => import('./module/customer/customer.module').then(m => m.CustomerModule), component: LayoutHomeComponent  },
       { path: '**', redirectTo: 'web', pathMatch: 'full' }
 

@@ -28,8 +28,7 @@ export class LayoutHomeComponent implements OnInit {
       .then(
         async (data) => {
           this._AuthUserService.logout();
-          this.router.navigate(['/web']);
-
+          this.router.navigate(['/web/home']);
         }
       )
       .catch(err => console.log(err));
