@@ -16,6 +16,8 @@ import {AngularFireAuthModule} from "@angular/fire/auth";
 import {environment} from "../environments/environment";
 import {WebModule} from "./module/web/web.module";
 import {CustomerModule} from "./module/customer/customer.module";
+import {MatTabsModule} from "@angular/material/tabs";
+import {AdmModule} from "./module/adm/adm.module";
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import {CustomerModule} from "./module/customer/customer.module";
     AuthModule,
     WebModule,
     CustomerModule,
+    AdmModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     ToastrModule.forRoot({
