@@ -12,9 +12,14 @@ import {Register} from "ts-node";
 import {RegisterComponent} from "./register/register.component";
 import {LoginService} from "./login/login.service";
 import {RecoverComponent} from "./recover/recover.component";
+import {MatTableModule} from "@angular/material/table";
+import {RegisterCommerceComponent} from "./registerCommerce/registerCommerce.component";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {LoginAdmService} from "./loginAdm/loginAdm.service";
+import {LoginAdmComponent} from "./loginAdm/loginAdm.component";
 
 @NgModule({
-  declarations: [AuthComponent, LoginComponent, RegisterComponent, RecoverComponent ],
+  declarations: [AuthComponent, LoginComponent, RegisterComponent, RecoverComponent, RegisterCommerceComponent, LoginAdmComponent ],
   imports: [
     AuthRoutes,
     CommonModule,
@@ -22,11 +27,14 @@ import {RecoverComponent} from "./recover/recover.component";
     ReactiveFormsModule,
     MatFormFieldModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [
     Md5,
-    LoginService
+    LoginService,
+    LoginAdmService
   ]
 })
 export class AuthModule { }

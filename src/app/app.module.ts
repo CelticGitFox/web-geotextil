@@ -18,11 +18,13 @@ import {WebModule} from "./module/web/web.module";
 import {CustomerModule} from "./module/customer/customer.module";
 import {MatTabsModule} from "@angular/material/tabs";
 import {AdmModule} from "./module/adm/adm.module";
+import {LayoutUserHomeComponent} from "./layout/layoutUser-home/layoutUser-home.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutHomeComponent
+    LayoutHomeComponent,
+    LayoutUserHomeComponent
   ],
   imports: [
     AppRoutes,

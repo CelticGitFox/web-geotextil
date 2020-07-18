@@ -22,7 +22,6 @@ import {MensajeriaComponent} from "./mensajeria/mensajeria.component";
           {path: 'registro', component: RegistroComercioComponent },
           {path: 'bolsa', component: BolsaTrabajoComponent },
           {path: 'mensajeria', component: MensajeriaComponent },
-
         ]
       }
     ])

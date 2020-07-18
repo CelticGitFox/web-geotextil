@@ -12,6 +12,11 @@ import {ListCommerceComponent} from "./listCommerce/listCommerce.component";
 import {ListUsersComponent} from "./listUsers/listUsers.component";
 import {ListJobsComponent} from "./listJobs/listJobs.component";
 import {ListPromotionsComponent} from "./listPromotions/listPromotions.component";
+import {DetailCommerceComponent} from "./detailCommerce/detailCommerce.component";
+import {RegisterCommerceComponent} from "./registerCommerce/registerCommerce.component";
+import {DetailuserComponent} from "./detailuser/detailuser.component";
+import {DetailJobsComponent} from "./detailJobs/detailJobs.component";
+import {DetailPromotionsComponent} from "./detailPromotions/detailPromotions.component";
 
 @NgModule({
   imports: [
@@ -30,6 +35,11 @@ import {ListPromotionsComponent} from "./listPromotions/listPromotions.component
           {path: 'listado_usuarios', component: ListUsersComponent },
           {path: 'listado_bolsa_trabajo', component: ListJobsComponent },
           {path: 'listado_publicidad_promocion', component: ListPromotionsComponent },
+          {path: 'listado_comercios/detalle_comercio/:id', component: DetailCommerceComponent },
+          {path: 'listado_comercios/registro_comercio', component: RegisterCommerceComponent },
+          {path: 'listado_usuarios/detalle_usuario/:id', component: DetailuserComponent },
+          {path: 'listado_bolsa_trabajo/detalle_bolsa_trabajo/:id', component: DetailJobsComponent },
+          {path: 'listado_publicidad_promocion/detalle_publicidad_promocion/:id', component: DetailPromotionsComponent },
         ]
       }
     ])

@@ -3,14 +3,16 @@ import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './procesos.component.html',
-  styleUrls: ['./procesos.component.sass']
+  templateUrl: './proccess.component.html',
+  styleUrls: ['./proccess.component.sass']
 })
 
-export class ProcesosComponent implements OnInit {
+export class ProccessComponent implements OnInit {
   constructor(
   ) {
+
   }
+
   ngOnInit() {
   }
 }

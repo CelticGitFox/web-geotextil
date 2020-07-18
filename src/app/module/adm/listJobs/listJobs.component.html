@@ -33,7 +33,7 @@
                 <legend class="scheduler-border"> &nbsp;Buscar por</legend>
                 <div class="row mt-3">
                   <div class="col-12 col-sm-3 pb-3 pb-sm-0">
-                    <label for="numAviso">n° Aviso</label>
+                    <label for="numAviso">N° Aviso</label>
                     <input id="numAviso"
                            class="form-control"
                            placeholder="Ingresar información"
@@ -106,7 +106,27 @@
 
                     <ng-container matColumnDef="option">
                       <th mat-header-cell *matHeaderCellDef> Opciones </th>
-                      <td mat-cell *matCellDef="let element"> {{element.option}} </td>
+                      <td mat-cell *matCellDef="let element" class="text-center">
+                        <button class="btn gradiante p-1" [routerLink]="['/adm/listado_bolsa_trabajo/detalle_bolsa_trabajo/3']">
+                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 86" width="30" height="30">
+                            <g id="Capa_1">
+                              <g>
+                                <path class="stEye" d="M12.22,42.67c1.64-1.6,3.2-3.22,4.86-4.71c2.7-2.43,5.65-4.54,8.84-6.3c3.87-2.14,7.95-3.71,12.35-4.39
+                                  c7.01-1.09,13.52,0.5,19.73,3.67c4.96,2.53,9.32,5.88,13.2,9.86c0.6,0.61,1.16,1.26,1.8,1.97c-0.94,0.99-1.85,2-2.83,2.94
+                                  c-3.9,3.76-8.23,6.92-13.12,9.28c-3.31,1.6-6.77,2.69-10.41,3.25c-5.46,0.84-10.67-0.08-15.72-2.08
+                                  c-6.78-2.69-12.53-6.9-17.52-12.19c-0.19-0.2-0.36-0.41-0.55-0.61C12.69,43.17,12.52,42.99,12.22,42.67z M42.65,30.93
+                                  c-0.59,0-1.17-0.04-1.76,0.01c-3.4,0.3-6.65,1.17-9.75,2.6c-0.24,0.11-0.48,0.33-0.61,0.56c-1.54,2.75-2.05,5.72-1.56,8.8
+                                  c0.59,3.76,2.44,6.83,5.53,9.08c2.57,1.87,5.47,2.73,8.66,2.61c3.73-0.13,6.88-1.56,9.45-4.22c2.19-2.26,3.45-4.99,3.77-8.15
+                                  c0.3-2.97-0.29-5.72-1.75-8.3c-0.08-0.14-0.22-0.27-0.37-0.34C50.57,31.92,46.73,30.87,42.65,30.93z M67.25,42.72
+                                  c-2.38-2.37-6.12-5.41-7.27-5.91c1.05,4.71,0.3,9.11-2.16,13.27C59.88,49.19,65.91,44.47,67.25,42.72z M27.38,50.04
+                                  c-2.38-4.16-3.12-8.55-2.05-13.33c-2.71,1.82-5.11,3.8-7.33,6.05C20.85,45.6,23.93,48.06,27.38,50.04z"/>
+                                <path class="st0" d="M42.57,46.71c-3.18-0.04-5.92-2.76-5.87-5.84c0.05-3.43,2.67-6.1,5.97-6.04c3.46,0.07,5.9,2.76,5.9,5.93
+                                  C48.57,44.11,45.83,46.75,42.57,46.71z"/>
+                              </g>
+                            </g>
+                          </svg>
+                        </button>
+                      </td>
                     </ng-container>
 
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

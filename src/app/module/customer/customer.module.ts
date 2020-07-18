@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 import { CustomerComponent } from './customer.component';
 import { CustomerRoutes } from './customer.routes';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {ProcesosComponent} from './procesos/procesos.component';
 import {Md5} from "ts-md5";
 import {ProfileComponent} from "./profile/profile.component";
 import {MessageComponent} from "./message/message.component";
 import {JobsComponent} from "./jobs/jobs.component";
+import {ProccessComponent} from "./proccess/proccess.component";
 
 @NgModule({
-  declarations: [CustomerComponent, ProcesosComponent, ProfileComponent, MessageComponent, JobsComponent ],
+  declarations: [CustomerComponent, ProfileComponent, MessageComponent, JobsComponent, ProccessComponent, JobsComponent ],
   imports: [
     CustomerRoutes,
     CommonModule,

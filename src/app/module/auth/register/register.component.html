@@ -6,10 +6,10 @@
       </div>
       <div class="row" style="padding: 60px; background-color: #ffffff">
         <div class="col-12 p-10 ingresar">
-          <button type="button" [disabled]="!form.valid" class="btn btn-primary width-100" (click)="login();">Usuario</button>
+          <button type="button" class="btn btn-primary width-100" (click)="login();">Usuario</button>
         </div>
         <div class="col-12 p-10 ingresar">
-          <button type="button" [disabled]="!form.valid" class="btn btn-primary width-100" (click)="login();">Comercio</button>
+          <button type="button" class="btn btn-primary width-100" [routerLink]="['/auth/registro_comercio']">Comercio</button>
         </div>
       </div>
     </div>

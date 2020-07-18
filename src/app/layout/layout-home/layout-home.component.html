@@ -257,7 +257,7 @@
       <div style="width: 100%;" class="container-outlet" *ngIf="!user">
         <router-outlet></router-outlet>
       </div>
-      <div style="width: 100%;" class="router container-outlet">
+      <div style="width: 100%;" class="router container-outlet" *ngIf="user">
         <router-outlet></router-outlet>
       </div>
     </div>

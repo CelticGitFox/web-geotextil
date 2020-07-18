@@ -1,35 +1,42 @@
 <section class="container-fluid">
   <div class="row">
-    <div class="col-sm-12 col-md-6 bg-danger p-0">
-      <div class="">
-        <div id="owl-carousel" class="owl-carousel owl-theme">
-          <div class="item">
-            <img src="assets/img/exito.jpg" alt="">
-            <div class="promo-slide">
-              <p class="m-0 titulo">PROMO <span class="m-0 off">20%</span></p>
-              <p class="parrafo-slide">Conoce más de esta imperdible promoción en MODATEXT</p>
-              <a href="#" class="btn-textil mt-3">Registrarse</a>
+    <div class="col-sm-12 col-md-6 bg-danger p-0" style="height: 90vh">
+      <mat-carousel
+        #matCarousel
+        [timings]="timings"
+        [autoplay]="autoplay"
+        [interval]="interval"
+        [loop]="loop"
+        [hideArrows]="hideArrows"
+        [hideIndicators]="hideIndicators"
+        [color]="color"
+        [maxWidth]="maxWidth"
+        [useKeyboard]="useKeyboard"
+        [useMouseWheel]="useMouseWheel"
+        [slides]="slides"
+        [maintainAspectRatio]="maintainAspectRatio"
+        [slideHeight]="slideHeight"
+      >
+        <mat-carousel-slide
+          #matCarouselSlide
+          *ngFor="let slide of slidesList; let i = index"
+          image="assets/exito.jpg"
+          [overlayColor]="overlayColor"
+          [hideOverlay]="hideOverlay"
+          style="height: 90vh"
+        >
+          <ng-container *ngIf="showContent" style="height: 90vh">
+            <div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+              <h1>{{ i }}</h1>
+              <p>disabled: {{ matCarouselSlide.disabled }}</p>
+              <button mat-flat-button class="btn btn-secondary btn-block" (click)="matCarouselSlide.disabled = !matCarouselSlide.disabled">
+                Click me!
+              </button>
             </div>
-          </div>
-          <!-- <div class="item">
-              2
-          </div>
-          <div class="item">
-              3
-          </div>
-          <div class="item">
-              4
-          </div>
-          <div class="item">
-              5
-          </div>
-          <div class="item">
-              6
-          </div> -->
-        </div>
-      </div>
+          </ng-container>
+        </mat-carousel-slide>
+      </mat-carousel>
     </div>
-
     <div class="col-sm-12 col-md-6 bg-gray">
       <div style="padding: 2%;">
         <div class="owl-dots mt-3">

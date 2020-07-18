@@ -79,10 +79,13 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
       .then(
         async (data) => {
           if (data) {
-            console.log(1);
             const user = await this._authService.getCurrentUser()
             this._AuthUserService.setAuth(user.uid, user.email);
-            this.router.navigate(['/customer/mensajeria']);
+            if(user.email === "user@mail.com") {
+              this.router.navigate(['/customer/perfil']);
+            } else {
+
+            }
           } else {
             this._toastr.error('¡Correo o Contraseña invalidas, por favor intentar de nuevo!', 'Error!');
           }
