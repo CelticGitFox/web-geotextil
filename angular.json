@@ -33,15 +33,19 @@
               "node_modules/select2/dist/css/select2.min.css",
               "src/styles.css",
               "src/styles.sass",
-              "node_modules/ngx-toastr/toastr.css"
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
+              "node_modules/angular-bootstrap-md/assets/scss/mdb.scss"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.js",
               "src/assets/vendor/bootstrap/js/bootstrap.bundle.min.js",
               "src/assets/vendor/jquery-easing/jquery.easing.min.js",
-              "src/assets/js/sb-admin-2.js",
-              "node_modules/select2/dist/js/select2.min.js"
+              "src/assets/js/bootstrap.js",
+              "src/assets/js/bootstrap.bundle.js",
+              "node_modules/select2/dist/js/select2.min.js",
+              "node_modules/chart.js/dist/Chart.js",
             ]
           },
           "configurations": {

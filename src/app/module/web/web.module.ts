@@ -7,7 +7,7 @@ import {HomeComponent} from './home/home.component';
 import {Md5} from "ts-md5";
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {NosotrosComponent} from "./nosotros/nosotros.component";
-import { MatCarouselModule } from '@ngmodule/material-carousel';
+import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   declarations: [WebComponent, HomeComponent, NosotrosComponent,  ],
@@ -17,7 +17,7 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     FormsModule,
     ReactiveFormsModule,
     CarouselModule,
-    MatCarouselModule.forRoot(),
+    NgbCarouselModule
   ],
   providers: [
     Md5

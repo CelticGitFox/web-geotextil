@@ -1,56 +1,38 @@
-<section class="container-fluid">
-  <div class="row">
-    <div class="col-sm-12 col-md-6 bg-danger p-0" style="height: 90vh">
-      <mat-carousel
-        #matCarousel
-        [timings]="timings"
-        [autoplay]="autoplay"
-        [interval]="interval"
-        [loop]="loop"
-        [hideArrows]="hideArrows"
-        [hideIndicators]="hideIndicators"
-        [color]="color"
-        [maxWidth]="maxWidth"
-        [useKeyboard]="useKeyboard"
-        [useMouseWheel]="useMouseWheel"
-        [slides]="slides"
-        [maintainAspectRatio]="maintainAspectRatio"
-        [slideHeight]="slideHeight"
-      >
-        <mat-carousel-slide
-          #matCarouselSlide
-          *ngFor="let slide of slidesList; let i = index"
-          image="assets/exito.jpg"
-          [overlayColor]="overlayColor"
-          [hideOverlay]="hideOverlay"
-          style="height: 90vh"
-        >
-          <ng-container *ngIf="showContent" style="height: 90vh">
-            <div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center">
-              <h1>{{ i }}</h1>
-              <p>disabled: {{ matCarouselSlide.disabled }}</p>
-              <button mat-flat-button class="btn btn-secondary btn-block" (click)="matCarouselSlide.disabled = !matCarouselSlide.disabled">
-                Click me!
-              </button>
-            </div>
-          </ng-container>
-        </mat-carousel-slide>
-      </mat-carousel>
-    </div>
-    <div class="col-sm-12 col-md-6 bg-gray">
-      <div style="padding: 2%;">
-        <div class="owl-dots mt-3">
-          <div class="owl-dot active"><span></span></div>
-          <div class="owl-dot"><span></span></div>
-          <div class="owl-dot"><span></span></div>
-        </div>
-        <h1 class="display-1 titulo mt-3">Calidad y variedad</h1>
-        <p>Sómos la empresa lider en innovación textil de alta calidad.</p>
-        <a href="#" class="btn-textil">Registrarse</a>
+<div class="caarousel">
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[0]" alt="Random first slide">
       </div>
-    </div>
-    <div>
-
-    </div>
+      <div class="carousel-caption">
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[1]" alt="Random second slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[2]" alt="Random third slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Third slide label</h3>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+<div class="content-text bg-gray">
+  <div style="padding: 2%;">
+    <h1 class="display-1 titulo mt-3">Calidad y variedad</h1>
+    <p>Sómos la empresa lider en innovación textil de alta calidad.</p>
+    <a href="#" class="btn-textil">Registrarse</a>
   </div>
-</section>
+</div>
