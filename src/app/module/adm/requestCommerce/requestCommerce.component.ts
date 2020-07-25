@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { NgxSpinnerService } from "ngx-spinner";
-import {FormBuilder} from "@angular/forms";
+import { NgxSpinnerService } from 'ngx-spinner';
+import {FormBuilder} from '@angular/forms';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import {Location} from '@angular/common';

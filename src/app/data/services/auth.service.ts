@@ -1,61 +1,64 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth} from "@angular/fire/auth";
-import { auth } from "firebase/app";
+import { AngularFireAuth} from '@angular/fire/auth';
+import { auth } from 'firebase/app';
 import { User } from 'firebase';
-import {first} from "rxjs/operators";
+import {first} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  public user:User;
+  public user: User;
 
   constructor(
     public afAuth: AngularFireAuth
   ) { }
 
-  async login(email:string, password:string){
-    try{
+  async login(email: string, password: string) {
+    try {
       return await this.afAuth.signInWithEmailAndPassword(email, password);
-    }
-    catch (e) {
+    } catch (e) {
       console.log(e);
     }
   }
 
-  async recover(email:string){
-    try{
+  async recover(email: string) {
+    try {
       return await this.afAuth.sendPasswordResetEmail(email);
-    }
-    catch (e) {
+    } catch (e) {
       console.log(e);
     }
   }
 
-  async register(email:string, password:string){
-    try{
-      return await this.afAuth.createUserWithEmailAndPassword(email, password)
-    }
-    catch (e) {
+  async register(email: string, password: string) {
+    try {
+      return await this.afAuth.createUserWithEmailAndPassword(email, password);
+    } catch (e) {
       console.log(e);
     }
   }
 
-  async logout(){
+  async logout() {
     try {
       await this.afAuth.signOut();
-    }
-    catch (e) {
+    } catch (e) {
       console.log(e);
     }
   }
-  getCurrentUser(){
-    try{
+  getCurrentUser() {
+    try {
       return this.afAuth.authState.pipe(first()).toPromise();
-    }
-    catch (e) {
+    } catch (e) {
       console.log(e);
     }
+  }
+
+  async updatePhoto(photoUrl: any) {
+    return this.afAuth.onAuthStateChanged((user) => {
+      user.updateProfile({
+        photoURL: photoUrl
+      });
+    });
   }
 }

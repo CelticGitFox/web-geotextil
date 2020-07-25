@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LayoutUserHomeComponent } from './layoutUser-home.component';
 
-describe('LayoutUserHomeComponent', () => {
+describe('LayoutComHomeComponent', () => {
   let component: LayoutUserHomeComponent;
   let fixture: ComponentFixture<LayoutUserHomeComponent>;
 

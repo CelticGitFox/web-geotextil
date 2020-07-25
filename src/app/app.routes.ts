@@ -3,7 +3,8 @@ import { RouterModule } from '@angular/router';
 import { AuthModule } from './system/auth/auth.module';
 import { AuthGuard } from './system/auth/auth.guard';
 import { LayoutHomeComponent } from './layout/layout-home/layout-home.component';
-import {LayoutUserHomeComponent} from "./layout/layoutUser-home/layoutUser-home.component";
+import {LayoutUserHomeComponent} from './layout/layoutUser-home/layoutUser-home.component';
+import {LayoutComHomeComponent} from './layout/layoutCom-home/layoutCom-home.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import {LayoutUserHomeComponent} from "./layout/layoutUser-home/layoutUser-home.
       { path: 'web', loadChildren: () => import('./module/web/web.module').then(m => m.WebModule), component: LayoutHomeComponent },
       { path: 'adm', loadChildren: () => import('./module/adm/adm.module').then(m => m.AdmModule), component: LayoutHomeComponent },
       { path: 'customer', loadChildren: () => import('./module/customer/customer.module').then(m => m.CustomerModule), component: LayoutUserHomeComponent  },
+      { path: 'commerce', loadChildren: () => import('./module/commerce/commerce.module').then(m => m.CommerceModule), component: LayoutComHomeComponent  },
       { path: '**', redirectTo: 'web/home', pathMatch: 'full' }
 
     ], { useHash: true })

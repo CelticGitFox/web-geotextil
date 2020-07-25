@@ -3,20 +3,20 @@ import {RouterModule} from '@angular/router';
 import {AdmComponent} from './adm.component';
 import {AuthGuard} from '../../system/auth/auth.guard';
 import {AuthModule} from '../../system/auth/auth.module';
-import {ProfileComponent} from "./profile/profile.component";
-import {NotificationComponent} from "./notification/notification.component";
-import {RequestCommerceComponent} from "./requestCommerce/requestCommerce.component";
-import {RequestJobsComponent} from "./requestJobs/requestJobs.component";
-import {RequestPromotionsComponent} from "./requestPromotions/requestPromotions.component";
-import {ListCommerceComponent} from "./listCommerce/listCommerce.component";
-import {ListUsersComponent} from "./listUsers/listUsers.component";
-import {ListJobsComponent} from "./listJobs/listJobs.component";
-import {ListPromotionsComponent} from "./listPromotions/listPromotions.component";
-import {DetailCommerceComponent} from "./detailCommerce/detailCommerce.component";
-import {RegisterCommerceComponent} from "./registerCommerce/registerCommerce.component";
-import {DetailuserComponent} from "./detailuser/detailuser.component";
-import {DetailJobsComponent} from "./detailJobs/detailJobs.component";
-import {DetailPromotionsComponent} from "./detailPromotions/detailPromotions.component";
+import {ProfileComponent} from './profile/profile.component';
+import {NotificationComponent} from './notification/notification.component';
+import {RequestCommerceComponent} from './requestCommerce/requestCommerce.component';
+import {RequestJobsComponent} from './requestJobs/requestJobs.component';
+import {RequestPromotionsComponent} from './requestPromotions/requestPromotions.component';
+import {ListCommerceComponent} from './listCommerce/listCommerce.component';
+import {ListUsersComponent} from './listUsers/listUsers.component';
+import {ListJobsComponent} from './listJobs/listJobs.component';
+import {ListPromotionsComponent} from './listPromotions/listPromotions.component';
+import {DetailCommerceComponent} from './detailCommerce/detailCommerce.component';
+import {RegisterCommerceComponent} from './registerCommerce/registerCommerce.component';
+import {DetailuserComponent} from './detailuser/detailuser.component';
+import {DetailJobsComponent} from './detailJobs/detailJobs.component';
+import {DetailPromotionsComponent} from './detailPromotions/detailPromotions.component';
 
 @NgModule({
   imports: [

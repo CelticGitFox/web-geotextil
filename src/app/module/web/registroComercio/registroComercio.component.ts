@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { NgxSpinnerService } from "ngx-spinner";
-import {FormBuilder} from "@angular/forms";
+import { NgxSpinnerService } from 'ngx-spinner';
+import {FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-dashboard',

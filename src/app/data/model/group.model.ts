@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {RolModel} from "./rol.model";
-import {GroupRoleModel} from "./groupRole.model";
+import {RolModel} from './rol.model';
+import {GroupRoleModel} from './groupRole.model';
 
 @Injectable()
 export class GroupModel {
