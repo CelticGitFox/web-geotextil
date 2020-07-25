@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthUserService} from "../../system/auth/authUser.service";
-import {AuthService} from "../../data/services/auth.service";
-import {Router} from "@angular/router";
+import {AuthUserService} from '../../system/auth/authUser.service';
+import {AuthService} from '../../data/services/auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-layout-home',
@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./layoutUser-home.component.sass']
 })
 export class LayoutUserHomeComponent implements OnInit {
-  public user: string = "";
+  public user = '';
 
   constructor(
     private _AuthUserService: AuthUserService,
@@ -20,10 +20,10 @@ export class LayoutUserHomeComponent implements OnInit {
 
   ngOnInit() {
     this.user = this._AuthUserService.getUser();
-    console.log(this.user)
+    console.log(this.user);
   }
 
-  public logout () {
+  public logout() {
     this._authService.logout()
       .then(
         async (data) => {
@@ -36,7 +36,7 @@ export class LayoutUserHomeComponent implements OnInit {
 
   public redirect(page: string) {
 
-    const url:string = "/customer/"+page;
+    const url: string = '/customer/' + page;
     this.router.navigate([url]);
   }
 }

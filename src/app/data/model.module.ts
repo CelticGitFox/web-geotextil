@@ -7,12 +7,14 @@ import {GroupService} from './services/group.service';
 import {RolService} from './services/rol.service';
 import {RolModel} from './model/rol.model';
 import {OptionModel} from './model/option.model';
-import {FileService} from "./services/file.service";
-import {FileTypeData} from "./static/fileType.data";
-import {FileMultipleModel} from "./model/fileMultiple.model";
-import {CatalogueData} from "./static/Catalogue.data";
-import {CatalogueService} from "./services/catalogue.service";
-import {AuthService} from "./services/auth.service";
+import {FileService} from './services/file.service';
+import {FileTypeData} from './static/fileType.data';
+import {FileMultipleModel} from './model/fileMultiple.model';
+import {CatalogueData} from './static/Catalogue.data';
+import {CatalogueService} from './services/catalogue.service';
+import {AuthService} from './services/auth.service';
+import {ProfileAdmModel} from './model/profileAdm.model';
+import {ProfileAdmService} from './services/profileAdm.service';
 
 @NgModule({
   imports: [
@@ -31,7 +33,9 @@ import {AuthService} from "./services/auth.service";
     FileMultipleModel,
     CatalogueData,
     CatalogueService,
-    AuthService
+    AuthService,
+    ProfileAdmModel,
+    ProfileAdmService
   ]
 })
 export class ModelModule {

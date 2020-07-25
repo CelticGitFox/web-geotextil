@@ -26,43 +26,44 @@
                             <div class="col-sm-12 col-md-12 content-img">
                                 <div class="p-2 content-width-img text-center">
                                   <img src="https://via.placeholder.com/500" width="100" alt="" class="img-fluid slide">
-                                  <img src="assets/icon/general/add.svg" width="30" height="30" class="imdAdd">
+                                  <!--<img *ngIf="url" [src]="url" width="100" alt="" class="img-fluid slide">-->
+                                  <img src="assets/icon/general/add.svg" width="30" height="30" class="imdAdd" (click)="addFile()">
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-12" [formGroup]="form">
                                 <div class="row mx-sm-4 mx-0 p-3">
                                     <div class="col-md-6">
+                                      <input class="d-none" type="file" id="file" accept="image/*" (change)="onUpload($event)" (click)="onUpload($event)">
                                         <div class="">
                                             <label class="text-danger font-weight-bold" for="">Nombre</label>
                                             <img src="" alt="">
-                                            <input type="text" class="form-control" placeholder="Escribir aquí...">
+                                            <input type="text" class="form-control" formControlName="name" placeholder="Escribir aquí...">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="text-danger font-weight-bold" for="">DNI</label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" formControlName="dni">
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mt-3">
                                             <label class="text-danger font-weight-bold" for="">Número telefónico</label>
-                                            <input type="text" class="form-control" placeholder="00-000 000 000">
+                                            <input type="text" class="form-control"  formControlName="phone" placeholder="00-000 000 000">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mt-3">
                                             <label class="text-danger font-weight-bold" for="">Correo Electrónico</label>
-                                            <input type="text" class="form-control" placeholder="nombre_de_correo@mail.com">
+                                            <input type="text" class="form-control" formControlName="email" placeholder="nombre_de_correo@mail.com">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row mx-sm-4 mx-0 px-3">
                                     <div class="col-12">
                                         <label class="text-danger font-weight-bold" for="">Ubicación</label>
-                                        <input type="text" class="form-control" placeholder="San Juan de Lurigancho Av. , Calle. Mz, Número 000">
+                                        <input type="text" class="form-control"  formControlName="address" placeholder="San Juan de Lurigancho Av. , Calle. Mz, Número 000">
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         <hr>
                         <div class="buttons-cont">
@@ -79,7 +80,7 @@
                                         <button class="btn btn-outline-dark btn-block">Cancelar</button>
                                     </div>
                                     <div class="p-2">
-                                        <button class="btn btn-danger btn-block">Actualizar</button>
+                                        <button class="btn btn-danger btn-block" (click)="updateProfile()">Actualizar</button>
                                     </div>
                                 </div>
                             </div>

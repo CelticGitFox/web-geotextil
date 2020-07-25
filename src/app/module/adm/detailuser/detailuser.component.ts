@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { NgxSpinnerService } from "ngx-spinner";
-import {FormBuilder} from "@angular/forms";
-import {Location} from "@angular/common";
+import { NgxSpinnerService } from 'ngx-spinner';
+import {FormBuilder} from '@angular/forms';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-detailuser',

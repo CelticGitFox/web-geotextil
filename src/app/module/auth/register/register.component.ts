@@ -4,8 +4,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {ToastrService} from 'ngx-toastr';
-import {Title} from "@angular/platform-browser";
-import {AuthService} from "../../../data/services/auth.service";
+import {Title} from '@angular/platform-browser';
+import {AuthService} from '../../../data/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -14,7 +14,7 @@ import {AuthService} from "../../../data/services/auth.service";
 })
 export class RegisterComponent implements OnInit {
   public form: FormGroup;
-  public tab: number = 1;
+  public tab = 1;
 
   constructor(
     private route: ActivatedRoute,
@@ -38,7 +38,7 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  public tabs(index:number) {
+  public tabs(index: number) {
     this.tab = index;
   }
 }

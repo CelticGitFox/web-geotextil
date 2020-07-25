@@ -10,21 +10,24 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ModelModule} from './data/model.module';
-import {AuthModule} from "./module/auth/auth.module";
-import {AngularFireModule} from "@angular/fire";
-import {AngularFireAuthModule} from "@angular/fire/auth";
-import {environment} from "../environments/environment";
-import {WebModule} from "./module/web/web.module";
-import {CustomerModule} from "./module/customer/customer.module";
-import {MatTabsModule} from "@angular/material/tabs";
-import {AdmModule} from "./module/adm/adm.module";
-import {LayoutUserHomeComponent} from "./layout/layoutUser-home/layoutUser-home.component";
+import {AuthModule} from './module/auth/auth.module';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {environment} from '../environments/environment';
+import {WebModule} from './module/web/web.module';
+import {CustomerModule} from './module/customer/customer.module';
+import {MatTabsModule} from '@angular/material/tabs';
+import {AdmModule} from './module/adm/adm.module';
+import {LayoutUserHomeComponent} from './layout/layoutUser-home/layoutUser-home.component';
+import {CommerceModule} from './module/commerce/commerce.module';
+import {LayoutComHomeComponent} from './layout/layoutCom-home/layoutCom-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutHomeComponent,
-    LayoutUserHomeComponent
+    LayoutUserHomeComponent,
+    LayoutComHomeComponent
   ],
   imports: [
     AppRoutes,
@@ -36,6 +39,7 @@ import {LayoutUserHomeComponent} from "./layout/layoutUser-home/layoutUser-home.
     AuthModule,
     WebModule,
     CustomerModule,
+    CommerceModule,
     AdmModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,

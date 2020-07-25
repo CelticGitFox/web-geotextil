@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { NgxSpinnerService } from "ngx-spinner";
-import {FormBuilder, FormControl} from "@angular/forms";
+import { NgxSpinnerService } from 'ngx-spinner';
+import {FormBuilder, FormControl} from '@angular/forms';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import {Location} from '@angular/common';
@@ -16,7 +16,7 @@ export class DetailCommerceComponent implements OnInit {
   displayedColumns2: string[] = ['name', 'cantidad'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   dataSource2 = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA2);
-  public date = new FormControl(new Date("04/08/2020"));
+  public date = new FormControl(new Date('04/08/2020'));
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatPaginator, {static: true}) paginator2: MatPaginator;

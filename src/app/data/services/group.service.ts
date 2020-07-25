@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {AppService, BASE_URL_API} from 'src/app/app.service';
 import {Observable} from 'rxjs';
-import {GroupModel} from "../model/group.model";
+import {GroupModel} from '../model/group.model';
 
 @Injectable()
 export class GroupService extends AppService {

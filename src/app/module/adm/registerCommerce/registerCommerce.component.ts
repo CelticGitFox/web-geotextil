@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { NgxSpinnerService } from "ngx-spinner";
-import {FormBuilder} from "@angular/forms";
-import {Location} from "@angular/common";
+import { NgxSpinnerService } from 'ngx-spinner';
+import {FormBuilder} from '@angular/forms';
+import {Location} from '@angular/common';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 
@@ -12,7 +12,7 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 
 export class RegisterCommerceComponent implements OnInit {
-  public page: boolean = true;
+  public page = true;
   displayedColumns: string[] = ['name', 'option'];
   displayedColumns2: string[] = ['name', 'cantidad', 'option'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
