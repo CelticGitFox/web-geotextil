@@ -1,4 +1,4 @@
-<div class="container-fluid" style="padding: 0 30px; margin-top: 25px;">
+<div class="register-cont container-fluid" style="padding: 0 30px; margin-top: 25px;">
     <div class="">
         <div class="row">
             <div class="col-sm-12 col-md-12">
@@ -13,7 +13,7 @@
                             </g>
                         </svg>
                         <p class="m-0 h6 text-white">REGISTRO DE SOLICITUD DE COMERCIO</p>
-                        <div style="position: absolute; right: 40px;" (click)="goBack();">
+                        <div class="gradiante-arrow" style="position: absolute; right: 40px;" (click)="goBack();">
                           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93 93" width="45" height="50">
                             <g>
                               <path class="st0" d="M58.53,77c-1.11,0-2.23-0.37-3.16-1.13L25.58,51.5c-1.16-0.95-1.83-2.37-1.83-3.87s0.67-2.92,1.83-3.87
@@ -28,7 +28,7 @@
                     <div class="p-5">
                         <div class="detail-content" *ngIf="page">
                           <div class="row">
-                              <div class="col-md-4 text-center">
+                              <div class="mini-slide col-md-4 text-center">
                                   <div class="border p-2"><img src="https://via.placeholder.com/500" alt="" class="img-fluid slide"></div>
                                   <div class="d-flex justify-content-center">
                                       <div class="dot active"></div>
@@ -37,38 +37,35 @@
                                   </div>
                                   <a href="#" class="btn btn-danger mt-3">AGREGAR IMAGEN</a>
                               </div>
-                              <div class="col-md-8">
+                              <div class="right-form col-md-8">
                                   <div class="row">
                                       <div class="col-md-6">
                                           <div class="">
-                                              <label class="text-danger font-weight-bold" for="">Razon
-                                                  Social</label>
-                                              <input type="text" class="form-control">
+                                              <label class="text-danger font-weight-bold" for="">Razon Social</label>
+                                              <input type="text" class="form-control" placeholder="Escribir aquí..." >
                                           </div>
                                       </div>
                                       <div class="col-md-6">
                                           <label class="text-danger font-weight-bold" for="">Ruc</label>
-                                          <input type="text" class="form-control">
+                                          <input type="text" class="form-control" placeholder="Escribir aquí...">
                                       </div>
                                       <div class="col-md-6">
                                           <div class="mt-3">
-                                              <label class="text-danger font-weight-bold" for="">Número
-                                                  telefónico</label>
-                                              <input type="text" class="form-control">
+                                              <label class="text-danger font-weight-bold" for="">Número telefónico</label>
+                                              <input type="text" class="form-control" placeholder="00-000 000 000">
                                           </div>
                                       </div>
                                       <div class="col-md-6">
                                           <div class="mt-3">
-                                              <label class="text-danger font-weight-bold" for="">Correo
-                                                  Electrónico</label>
-                                              <input type="text" class="form-control">
+                                              <label class="text-danger font-weight-bold" for="">Correo Electrónico</label>
+                                              <input type="text" class="form-control" placeholder="nombre_de_correo@mail.com">
                                           </div>
                                       </div>
                                   </div>
                                   <div class="">
                                       <div class="mt-3">
                                           <label class="text-danger font-weight-bold" for="">Ubicacion</label>
-                                          <input type="text" class="form-control">
+                                          <input type="text" class="form-control" placeholder="San Juan de Lurigancho Av. , Calle. Mz, Número 000">
                                       </div>
                                   </div>
                               </div>
@@ -76,21 +73,21 @@
                           </div>
                           <hr>
                           <div class="row">
-                            <div class="col-sm-12 col-md-6">
+                            <div class="right-form col-sm-12 col-md-6">
                                 <div class="">
                                     <label class="text-danger font-weight-bold" for="">Categorias</label>
                                     <select class="form-control">
-                                        <option value="" selected>- Seleccione -</option>
+                                        <option value="" selected>- Selecciona Categoria -</option>
                                         <option value="1">Telas</option>
                                         <option value="2">Avios e Insumos</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
+                            <div class="right-form col-sm-12 col-md-6">
                                 <div class="">
                                     <label class="text-danger font-weight-bold" for="">Proceso</label>
                                     <select class="form-control">
-                                      <option value="" selected>- Seleccione -</option>
+                                      <option value="" selected>- Seleccionar Proceso -</option>
                                       <option value="1">Diseño</option>
                                       <option value="2">Molde</option>
                                     </select>
@@ -98,11 +95,11 @@
                             </div>
                         </div>
                           <div class="row">
-                            <div class="col-sm-12 mt-4 d-flex justify-content-center">
-                              <div class="p-2 w-25">
+                            <div class="last-bottoms col-sm-12 mt-4 d-flex justify-content-center">
+                              <div class="p-2">
                                 <button class="btn btn-outline-dark btn-block">Cancelar</button>
                               </div>
-                              <div class="p-2 w-25">
+                              <div class="p-2">
                                 <button class="btn gradiante btn-block text-white" (click)="changePage()">Siguiente</button>
                               </div>
                             </div>
@@ -120,7 +117,7 @@
                                     <option value="2">Molde</option>
                                   </select>
                                 </div>
-                                <div class="col-2 d-flex align-items-center">
+                                <div class="plus-img col-2 d-flex align-items-center">
                                   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50">
                                     <g id="Capa_1">
                                       <g>
@@ -146,7 +143,7 @@
                               </div>
                               <div class="row mt-4">
                                 <div class="col-12">
-                                  <div class="mat-elevation-z8">
+                                  <div class="table-c mat-elevation-z8">
                                   <table mat-table [dataSource]="dataSource">
                                     <ng-container matColumnDef="name">
                                       <th mat-header-cell *matHeaderCellDef> Name </th>
@@ -170,7 +167,7 @@
                             <div class="col-12 col-sm-6">
                               <div class="row">
                                 <div class="col-12 col-sm-5">
-                                  <label class="text-danger font-weight-bold" for="">Parque de Máquina</label>
+                                  <label class="maquina-change text-danger font-weight-bold" for="">Parque de Máquina</label>
                                   <select class="form-control">
                                     <option value="" selected>- Seleccione -</option>
                                     <option value="1">Proter</option>
@@ -186,7 +183,7 @@
                                     <option value="2">Molde</option>
                                   </select>
                                 </div>
-                                <div class="col-2 d-flex align-items-center">
+                                <div class="plus-img col-2 d-flex align-items-center">
                                   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50">
                                     <g id="Capa_1">
                                       <g>
@@ -250,7 +247,7 @@
                                 <button class="btn btn-outline-dark btn-block">Cancelar</button>
                               </div>
                               <div class="p-2 w-50">
-                                <button class="btn gradiante btn-block text-white">Rgistrar</button>
+                                <button class="btn gradiante btn-block text-white">Registrar</button>
                               </div>
                             </div>
                           </div>
