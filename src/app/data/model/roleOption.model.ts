@@ -5,7 +5,7 @@ export class RoleOptionModel {
   public id?: number;
   public roleId?: number;
   public optionId?: number;
-  public view?: boolean = false;
-  public edit?: boolean = false;
-  public delete?: boolean = false;
+  public view = false;
+  public edit = false;
+  public delete = false;
 }

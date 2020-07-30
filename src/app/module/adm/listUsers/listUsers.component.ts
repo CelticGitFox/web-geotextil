@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { NgxSpinnerService } from "ngx-spinner";
+import { NgxSpinnerService } from 'ngx-spinner';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 
@@ -32,11 +32,11 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {name: "Jose Pimentel", email: 'jose@mail.com', phone: 256986545, option: ''},
-  {name: "Felix Martinez", email: 'felix@mail.com', phone: 441123121, option: ''},
-  {name: "Kristal Dorta", email: 'kdorta@mail.com', phone: 442121212, option: ''},
-  {name: "Camilo Escobar", email: 'camiEsco@mail.com', phone: 644677322, option: ''},
-  {name: "MaricieloReyes", email: 'reyyes@mail.com', phone: 234556785, option: ''},
-  {name: "Luisa Lopez", email: 'luisa@mail.com', phone: 933748233, option: ''},
-  {name: "Armando Torres", email: 'arm@mail.com', phone: 983992332, option: ''},
+  {name: 'Jose Pimentel', email: 'jose@mail.com', phone: 256986545, option: ''},
+  {name: 'Felix Martinez', email: 'felix@mail.com', phone: 441123121, option: ''},
+  {name: 'Kristal Dorta', email: 'kdorta@mail.com', phone: 442121212, option: ''},
+  {name: 'Camilo Escobar', email: 'camiEsco@mail.com', phone: 644677322, option: ''},
+  {name: 'MaricieloReyes', email: 'reyyes@mail.com', phone: 234556785, option: ''},
+  {name: 'Luisa Lopez', email: 'luisa@mail.com', phone: 933748233, option: ''},
+  {name: 'Armando Torres', email: 'arm@mail.com', phone: 983992332, option: ''},
 ];

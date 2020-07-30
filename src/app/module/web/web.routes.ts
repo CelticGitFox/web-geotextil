@@ -4,10 +4,10 @@ import {WebComponent} from './web.component';
 import {HomeComponent} from './home/home.component';
 import {AuthGuard} from '../../system/auth/auth.guard';
 import {AuthModule} from '../../system/auth/auth.module';
-import {NosotrosComponent} from "./nosotros/nosotros.component";
-import {RegistroComercioComponent} from "./registroComercio/registroComercio.component";
-import {BolsaTrabajoComponent} from "./bolsaTrabajo/bolsaTrabajo.component";
-import {MensajeriaComponent} from "./mensajeria/mensajeria.component";
+import {NosotrosComponent} from './nosotros/nosotros.component';
+import {RegistroComercioComponent} from './registroComercio/registroComercio.component';
+import {BolsaTrabajoComponent} from './bolsaTrabajo/bolsaTrabajo.component';
+import {MensajeriaComponent} from './mensajeria/mensajeria.component';
 
 @NgModule({
   imports: [

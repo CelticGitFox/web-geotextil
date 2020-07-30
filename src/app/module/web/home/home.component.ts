@@ -1,6 +1,6 @@
 import {Component, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
-import { NgxSpinnerService } from "ngx-spinner";
-import {FormBuilder} from "@angular/forms";
+import { NgxSpinnerService } from 'ngx-spinner';
+import {FormBuilder} from '@angular/forms';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({

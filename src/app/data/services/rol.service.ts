@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {AppService, BASE_URL_API} from 'src/app/app.service';
 import {Observable} from 'rxjs';
-import {RolModel} from "../model/rol.model";
+import {RolModel} from '../model/rol.model';
 
 @Injectable()
 export class RolService extends AppService {

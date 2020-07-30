@@ -5,9 +5,8 @@ import {AuthUserService} from '../../../system/auth/authUser.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {ToastrService} from 'ngx-toastr';
-import {Title} from "@angular/platform-browser";
-import {AuthService} from "../../../data/services/auth.service";
-import {UserService} from "../../../data/services/user.service";
+import {AuthService} from '../../../data/services/auth.service';
+import {UserService} from '../../../data/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +21,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
   public validMail = false;
   public returnUrl: string;
   public variable: string;
-  public typePass: string = "password";
+  public typePass = 'password';
   public form: FormGroup;
   public currentView = null;
   public pass = null;
@@ -55,7 +54,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    const info = this.route.snapshot.queryParams['info'] || '';
+    const info = this.route.snapshot.queryParams.info || '';
     switch (info) {
       case '0':
         this._toastr.error('¡No hay conexión con el servidor, por favor inténtalo más tarde!', 'Error');
@@ -79,12 +78,12 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
       .then(
         async (data) => {
           if (data) {
-            const user = await this._authService.getCurrentUser()
+            const user = await this._authService.getCurrentUser();
             this._AuthUserService.setAuth(user.uid, user.email);
-            if(user.email === "user@mail.com") {
+            if (user.email === 'user@mail.com') {
               this.router.navigate(['/customer/perfil']);
             } else {
-
+              this.router.navigate(['/commerce/perfil']);
             }
           } else {
             this._toastr.error('¡Correo o Contraseña invalidas, por favor intentar de nuevo!', 'Error!');
@@ -113,6 +112,6 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   public changeType() {
-    this.typePass = (this.typePass === "password") ? "text" : "password";
+    this.typePass = (this.typePass === 'password') ? 'text' : 'password';
   }
 }

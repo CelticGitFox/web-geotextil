@@ -16,13 +16,13 @@ export const environment = {
   apiPath: 'api',
   apiPort: 44366,
   firebaseConfig: {
-    apiKey: "AIzaSyDTe7v3SzkXpwVokjaP4oqLCPSeayzYDj8",
-    authDomain: "geotextil-76e41.firebaseapp.com",
-    databaseURL: "https://geotextil-76e41.firebaseio.com",
-    projectId: "geotextil-76e41",
-    storageBucket: "geotextil-76e41.appspot.com",
-    messagingSenderId: "1047494190122",
-    appId: "1:1047494190122:web:fa1c80741d4f2ea216cf53"
+    apiKey: 'AIzaSyDTe7v3SzkXpwVokjaP4oqLCPSeayzYDj8',
+    authDomain: 'geotextil-76e41.firebaseapp.com',
+    databaseURL: 'https://geotextil-76e41.firebaseio.com',
+    projectId: 'geotextil-76e41',
+    storageBucket: 'geotextil-76e41.appspot.com',
+    messagingSenderId: '1047494190122',
+    appId: '1:1047494190122:web:fa1c80741d4f2ea216cf53'
   }
 };
 

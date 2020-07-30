@@ -5,9 +5,9 @@ import {AuthUserService} from '../../../system/auth/authUser.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {ToastrService} from 'ngx-toastr';
-import {Title} from "@angular/platform-browser";
-import {AuthService} from "../../../data/services/auth.service";
-import {UserService} from "../../../data/services/user.service";
+import {Title} from '@angular/platform-browser';
+import {AuthService} from '../../../data/services/auth.service';
+import {UserService} from '../../../data/services/user.service';
 
 @Component({
   selector: 'app-recover',
@@ -22,7 +22,7 @@ export class RecoverComponent implements OnInit, AfterViewInit, OnDestroy {
   public validMail = false;
   public returnUrl: string;
   public variable: string;
-  public typePass: string = "password";
+  public typePass = 'password';
   public form: FormGroup;
   public currentView = null;
   public pass = null;
@@ -54,7 +54,7 @@ export class RecoverComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    const info = this.route.snapshot.queryParams['info'] || '';
+    const info = this.route.snapshot.queryParams.info || '';
     switch (info) {
       case '0':
         this._toastr.error('¡No hay conexión con el servidor, por favor inténtalo más tarde!', 'Error');
