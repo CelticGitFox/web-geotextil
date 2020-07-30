@@ -26,10 +26,11 @@ import {RegisterCommerceComponent} from "./registerCommerce/registerCommerce.com
 import {DetailuserComponent} from "./detailuser/detailuser.component";
 import {DetailJobsComponent} from "./detailJobs/detailJobs.component";
 import {DetailPromotionsComponent} from "./detailPromotions/detailPromotions.component";
+import { ListBlogComponent } from './list-blog/list-blog.component';
 
 @NgModule({
   declarations: [AdmComponent, ProfileComponent, NotificationComponent, RequestCommerceComponent, RequestJobsComponent, RequestPromotionsComponent, ListCommerceComponent, ListUsersComponent,
-  ListJobsComponent, ListPromotionsComponent, DetailCommerceComponent, RegisterCommerceComponent, DetailuserComponent, DetailJobsComponent, DetailPromotionsComponent],
+  ListJobsComponent, ListPromotionsComponent, DetailCommerceComponent, RegisterCommerceComponent, DetailuserComponent, DetailJobsComponent, DetailPromotionsComponent, ListBlogComponent],
   imports: [
     AdmRoutes,
     CommonModule,
