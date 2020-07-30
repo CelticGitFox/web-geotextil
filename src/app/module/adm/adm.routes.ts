@@ -17,6 +17,9 @@ import {RegisterCommerceComponent} from './registerCommerce/registerCommerce.com
 import {DetailuserComponent} from './detailuser/detailuser.component';
 import {DetailJobsComponent} from './detailJobs/detailJobs.component';
 import {DetailPromotionsComponent} from './detailPromotions/detailPromotions.component';
+import {DetailBlogComponent} from './detailBlog/detailBlog.component';
+import {ListBlogComponent} from './listBlog/listBlog.component';
+import {RegisterBlogComponent} from './registerBlog/registerBlog.component';
 
 @NgModule({
   imports: [
@@ -34,12 +37,15 @@ import {DetailPromotionsComponent} from './detailPromotions/detailPromotions.com
           {path: 'listado_comercios', component: ListCommerceComponent },
           {path: 'listado_usuarios', component: ListUsersComponent },
           {path: 'listado_bolsa_trabajo', component: ListJobsComponent },
+          {path: 'listado_blog', component: ListBlogComponent },
           {path: 'listado_publicidad_promocion', component: ListPromotionsComponent },
           {path: 'listado_comercios/detalle_comercio/:id', component: DetailCommerceComponent },
           {path: 'listado_comercios/registro_comercio', component: RegisterCommerceComponent },
           {path: 'listado_usuarios/detalle_usuario/:id', component: DetailuserComponent },
           {path: 'listado_bolsa_trabajo/detalle_bolsa_trabajo/:id', component: DetailJobsComponent },
           {path: 'listado_publicidad_promocion/detalle_publicidad_promocion/:id', component: DetailPromotionsComponent },
+          {path: 'listado_blog/detalle_blog/:id', component: DetailBlogComponent },
+          {path: 'listado_blog/registro_blog', component: RegisterBlogComponent },
         ]
       }
     ])
