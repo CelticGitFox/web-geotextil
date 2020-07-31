@@ -1,1 +1,66 @@
-<h1>Detalle del blog</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="red-title gradiante col-sm-12 col-md-11 col-xl-11">
+      <div class="d-flex align-items-center" style="padding: 0 21px;">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69 69" width="54" height="54">
+          <g>
+            <path class="st3" d="M27.25,17.67h11.52c0.44,0,0.8-0.36,0.8-0.8c0-0.44-0.36-0.8-0.8-0.8H27.25c-0.44,0-0.8,0.36-0.8,0.8
+              C26.45,17.31,26.81,17.67,27.25,17.67z"/>
+            <path class="st3" d="M49,47.6V21.2c0-0.01,0-0.01,0-0.02c0-0.01,0-0.01,0-0.02V14.5c0-0.29-0.15-0.55-0.4-0.7
+              c-4.25-2.43-12.33-2.76-14.84-2.8c-0.03,0-0.06-0.01-0.09,0l-0.16,0l-0.18,0c-0.03,0-0.06,0-0.09,0c-2.5,0.04-10.59,0.37-14.84,2.8
+              c-0.25,0.14-0.4,0.41-0.4,0.7v38.52c0,0.17,0.05,0.33,0.15,0.47c0.14,0.2,3.67,4.94,15.09,5.06c0.03,0,0.06,0.01,0.09,0.01l0.17,0
+              l0.17,0c0.03,0,0.06,0,0.09-0.01c11.42-0.12,14.95-4.86,15.09-5.06c0.1-0.14,0.15-0.3,0.15-0.47v-5.39c0-0.01,0-0.01,0-0.02
+              C49,47.61,49,47.61,49,47.6z M19.61,21.99h27.79v24.82H19.61V21.99z M33.34,12.61c0.02,0,0.04,0,0.06,0l0.11,0l0.09,0
+              c0.02,0,0.04,0,0.06,0c1.6,0.03,9.54,0.26,13.74,2.38v5.4H19.61v-5.4C23.8,12.86,31.75,12.63,33.34,12.61z M33.66,56.94
+              c-0.02,0-0.04,0-0.07,0l-0.1,0l-0.09,0c-0.02,0-0.04,0-0.07,0c-9.34-0.08-12.99-3.41-13.73-4.22v-4.3h27.79v4.3
+              C46.64,53.54,42.99,56.86,33.66,56.94z"/>
+            <path class="st3" d="M26.57,51.2h-3.38c-0.44,0-0.8,0.36-0.8,0.8c0,0.44,0.36,0.8,0.8,0.8h3.38c0.44,0,0.8-0.36,0.8-0.8
+              C27.38,51.56,27.02,51.2,26.57,51.2z"/>
+            <path class="st3" d="M43.83,51.2h-3.38c-0.44,0-0.8,0.36-0.8,0.8c0,0.44,0.36,0.8,0.8,0.8h3.38c0.44,0,0.8-0.36,0.8-0.8
+              C44.63,51.56,44.27,51.2,43.83,51.2z"/>
+            <circle class="st3" cx="33.45" cy="52.68" r="2.03"/>
+          </g>
+        </svg>
+        <p class="m-0 h6 text-white">LISTADO DE BLOG</p>
+        <div class="gradiante-arrow "style="position: absolute; right: 40px;" (click)="goBack();">
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93 93" width="50" height="50">
+            <g>
+              <path class="st0" d="M58.53,77c-1.11,0-2.23-0.37-3.16-1.13L25.58,51.5c-1.16-0.95-1.83-2.37-1.83-3.87s0.67-2.92,1.83-3.87
+                l29.79-24.37c2.14-1.75,5.29-1.43,7.04,0.7c1.75,2.14,1.43,5.29-0.7,7.04l-25.06,20.5l25.06,20.5c2.14,1.75,2.45,4.9,0.7,7.04
+                C61.42,76.37,59.98,77,58.53,77z"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-cont col-sm-12 col-md-12 col-xl-12">
+      <div class="fecha-m col-sm-12 col-md-12 col-xl-12">
+        <mat-form-field color="accent">
+          <mat-label class="text-danger text-date font-weight-bold">Fecha </mat-label> <!--Activar el sistema de fecha -->
+          <input matInput [matDatepicker]="picker" [formControl]="date" disabled>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="inputs-cont col-sm-12 col-md-12 col-xl-12">
+        <form action="">
+          <fieldset>
+            <label for="">Titulo</label>
+            <input type="text" placeholder="Coloque el titulo">
+            <label for="">Autor</label>
+            <input type="text" placeholder="Coloque por quien fue elaborado">
+            <label for="">Contenido del blog</label>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Coloque el contenido"></textarea>
+          </fieldset>
+        </form>
+        <div class="last-cont">
+          <div class="last-img-d border p-2"><img src="https://via.placeholder.com/500" alt="" class="img-fluid slide"></div>
+          <button class="btn gradiante btn-block text-white">Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
