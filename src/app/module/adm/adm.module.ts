@@ -31,7 +31,7 @@ import {DetailPromotionsComponent} from './detailPromotions/detailPromotions.com
 
 @NgModule({
   declarations: [AdmComponent, ProfileComponent, NotificationComponent, RequestCommerceComponent, RequestJobsComponent, RequestPromotionsComponent, ListCommerceComponent, ListUsersComponent,
-  ListJobsComponent, ListPromotionsComponent, DetailCommerceComponent, RegisterCommerceComponent, DetailuserComponent, DetailJobsComponent, DetailPromotionsComponent],
+  ListJobsComponent, ListPromotionsComponent, DetailCommerceComponent, RegisterCommerceComponent, DetailuserComponent, DetailJobsComponent, DetailPromotionsComponent, ListBlogComponent],
   imports: [
     AdmRoutes,
     CommonModule,
