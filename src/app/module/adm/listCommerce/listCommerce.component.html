@@ -1,7 +1,7 @@
 <div class="container-fluid" style="padding: 0 30px; margin-top: 25px;">
   <div class="">
     <div class="row">
-      <div class="col-sm-12 col-md-12">
+      <div class="col-sm-12 col-md-12 col-xl-12" >
         <div class="red-title gradiante">
           <div class="d-flex align-items-center" style="padding: 0 21px;">
             <svg viewBox="-5 -10 100 100" heigth="100" width="60">
@@ -18,7 +18,7 @@
         <div class="bg-white">
           <div class="buscar-cont p-5">
             <div class="row mb-2 d-flex justify-content-end">
-              <div class="col-12 col-sm-4 d-flex justify-content-end">
+              <div class="col-sm-4 col-md-6 col-xl-5 d-flex justify-content-end">
                 <button
                   class="boton-regis btn gradiante btn-block w-75 text-white"
                   [routerLink]="['/adm/listado_comercios/registro_comercio']"
@@ -31,7 +31,7 @@
               <fieldset class="scheduler-border">
                 <legend class="scheduler-border"> &nbsp;Buscar por</legend>
                 <div class="row mt-3">
-                  <div class="col-12 col-sm-3 pb-3 pb-sm-0">
+                  <div class=" col-sm-3 col-md-3 col-xl-3 pb-3 pb-sm-0">
                     <label for="commerce">Comercio</label>
                     <input id="commerce"
                            class="form-control"
@@ -39,21 +39,21 @@
 
                     >
                   </div>
-                  <div class="col-12 col-sm-3 pb-3 pb-sm-0">
+                  <div class=" col-sm-3 col-md-3 col-xl-3 pb-3 pb-sm-0">
                     <label for="proccess">Procesos</label>
                     <input id="proccess"
                            class="form-control"
                            placeholder="Ingresar información"
                     >
                   </div>
-                  <div class="col-12 col-sm-3 pb-3 pb-sm-0">
+                  <div class=" col-sm-3 col-md-3 col-xl-3 pb-3 pb-sm-0">
                     <label for="state">Estado</label>
                     <input id="state"
                            class="form-control"
                            placeholder="Ingresar información"
                     >
                   </div>
-                  <div class="col-12 col-sm-3 pb-3 pb-sm-0">
+                  <div class=" col-sm-3 col-md-3 col-xl-3 pb-3 pb-sm-0">
                     <label for="location">Ubicación</label>
                     <input id="location"
                            class="form-control"
@@ -62,7 +62,7 @@
                   </div>
                 </div>
                 <div class="row mt-4 d-flex align-items-end justify-content-end">
-                  <div class="col-12 col-sm-3 text-right">
+                  <div class="col-sm-3 col-md-3 col-xl-3 text-right">
                     <button type="button" class="btn gradiante btn-block text-white">Buscar</button>
                   </div>
                 </div>
@@ -70,7 +70,7 @@
             </div>
             <div class="row">
               <div class="col-sm-12 col-md-12 col-xl-12">
-                <div class="table-cont mat-elevation-z8">
+                <div class="table-cont mat-elevation-z8 table-responsive">
                   <table mat-table [dataSource]="dataSource">
 
                     <ng-container matColumnDef="commerce">
