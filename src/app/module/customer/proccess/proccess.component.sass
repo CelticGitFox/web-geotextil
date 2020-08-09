@@ -1,4 +1,4 @@
-@media screen and (min-width: 1440px) and (max-width: 1920px)
+@media screen and (min-width: 1920px)
 
   .gradiante
     margin-top: 1.3em
@@ -23,17 +23,62 @@
     label
       font-size: 1.2em
       color: #ed1c24
+      font-weight: bold
+
+  .ban-input
+    .b-group
+      .b-1
+        width: 20%
+        padding: 0.5em
+        border-radius: 0.4em 0em 0em 0.4em
+        color: #808080
+        border-top: solid 1px #e9e9e9
+        border-bottom: solid 1px #e9e9e9
+        border-right: solid 0px #e9e9e9
+        border-left: solid 1px #e9e9e9
+
+  .ban-input
+    .b-group
+      .b-2
+        width: 5%
+        padding: 0.5em
+        border-radius: 0em 0.4em 0.4em 0em
+        color: #808080
+        border-top: solid 1px #e9e9e9
+        border-bottom: solid 1px #e9e9e9
+        border-right: solid 1px #e9e9e9
+        border-left: solid 0px #e9e9e9
+
+  .ban-input
+    .b-group
+      .dropdown-menu
+        border-radius: 0.4em
+        border: solid 1px #e9e9e9
+
+  .ban-input
+    .b-group
+      .dropdown-menu
+        .dropdown-item
+          &:hover
+            background-color: #ed1c24 !important
+
 
   .ban-input
     select
-      width: 20%
-      border-radius: 0.2em
-      border: solid 1px #e9e9e9
+      .op-1
+        display: none
+
+  .ban-input
+    select
+      option
+        &:hover
+          background-color: red
 
   .main-cont
     display: flex
     flex-direction: row
     justify-content: center
+    padding: 0em 4em
 
   .main-cont
     .cont-border
@@ -46,9 +91,157 @@
   .main-cont
     .cont-border
       .cont-b
-        border: solid 1px #e9e9e9
+        border: solid 1px #808080
         border-radius: 0.5em
         margin-bottom: 1em
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        width: 100%
+
+  .main-cont
+    .cont-border
+        .control-cal
+          h1
+            position:relative
+            right:3em !important
+
+  .main-cont
+    .cont-border
+        .desig-graf
+          h1
+            position:relative
+            right:5em !important
+
+  .main-cont
+    .cont-border
+      .cont-b
+        h1
+          font-size: 1.2em
+          text-transform: uppercase
+          font-weight: bold
+          position: relative
+          right: 5em
+
+
+
+  .main-cont
+    .cont-border
+      .cont-b
+        img
+          width: 60%
+
+@media screen and (min-width: 1440px) and (max-width: 1600px)
+
+  .gradiante
+    margin-top: 1.3em
+    text-transform: uppercase
+
+  .gradiante
+    svg
+      fill: #fff
+
+  .ban-input
+    padding: 2em
+
+  .ban-input
+    form
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      position: relative
+      left: 3em
+
+  .ban-input
+    label
+      font-size: 1.2em
+      color: #ed1c24
+      font-weight: bold
+
+  .ban-input
+    .b-group
+      .b-1
+        width: 20%
+        padding: 0.5em
+        border-radius: 0.4em 0em 0em 0.4em
+        color: #808080
+        border-top: solid 1px #e9e9e9
+        border-bottom: solid 1px #e9e9e9
+        border-right: solid 0px #e9e9e9
+        border-left: solid 1px #e9e9e9
+
+  .ban-input
+    .b-group
+      .b-2
+        width: 5%
+        padding: 0.5em
+        border-radius: 0em 0.4em 0.4em 0em
+        color: #808080
+        border-top: solid 1px #e9e9e9
+        border-bottom: solid 1px #e9e9e9
+        border-right: solid 1px #e9e9e9
+        border-left: solid 0px #e9e9e9
+
+  .ban-input
+    .b-group
+      .dropdown-menu
+        border-radius: 0.4em
+        border: solid 1px #e9e9e9
+
+  .ban-input
+    .b-group
+      .dropdown-menu
+        .dropdown-item
+          &:hover
+            background-color: #ed1c24 !important
+
+  .ban-input
+    select
+      .op-1
+        display: none
+
+  .main-cont
+    display: flex
+    flex-direction: row
+    justify-content: center
+    padding: 0em 4em
+
+  .main-cont
+    .cont-border
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+      margin: 0.5em
+
+  .main-cont
+    .cont-border
+      .cont-b
+        border: solid 1px #808080
+        border-radius: 0.5em
+        margin-bottom: 1em
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        width: 90%
+
+  .main-cont
+    .cont-border
+        .control-cal
+          h1
+            position:relative
+            right:1em !important
+
+  .main-cont
+    .cont-border
+        .desig-graf
+          h1
+            position:relative
+            right:1em !important
 
   .main-cont
     .cont-border
@@ -56,12 +249,17 @@
         h1
           font-size: 1.1em
           text-transform: uppercase
+          font-weight: bold
+          position: relative
+          right: 3.7em
 
   .main-cont
     .cont-border
       .cont-b
         img
-          width: 50%
+          width: 60%
+
+
 
 
 
@@ -90,12 +288,44 @@
     label
       font-size: 1.2em
       color: #ed1c24
+      font-weight: bold
 
   .ban-input
-    select
-      width: 35%
-      border-radius: 0.2em
-      border: solid 1px #e9e9e9
+    .b-group
+      .b-1
+        width: 50%
+        padding: 0.5em
+        border-radius: 0.4em 0em 0em 0.4em
+        color: #808080
+        border-top: solid 1px #e9e9e9
+        border-bottom: solid 1px #e9e9e9
+        border-right: solid 0px #e9e9e9
+        border-left: solid 1px #e9e9e9
+
+  .ban-input
+    .b-group
+      .b-2
+        width: 5%
+        padding: 0.5em
+        border-radius: 0em 0.4em 0.4em 0em
+        color: #808080
+        border-top: solid 1px #e9e9e9
+        border-bottom: solid 1px #e9e9e9
+        border-right: solid 1px #e9e9e9
+        border-left: solid 0px #e9e9e9
+
+  .ban-input
+    .b-group
+      .dropdown-menu
+        border-radius: 0.4em
+        border: solid 1px #e9e9e9
+
+  .ban-input
+    .b-group
+      .dropdown-menu
+        .dropdown-item
+          &:hover
+            background-color: #ed1c24 !important
 
   .main-cont
     display: flex
@@ -113,7 +343,7 @@
   .main-cont
     .cont-border
       .cont-b
-        border: solid 1px #e9e9e9
+        border: solid 1px #808080
         border-radius: 0.5em
         margin-bottom: 1em
 
@@ -123,6 +353,7 @@
         h1
           font-size: 1em
           text-align: center
+          font-weight: bold
 
   .main-cont
     .cont-border
@@ -156,12 +387,44 @@
     label
       font-size: 1.2em
       color: #ed1c24
+      font-weight: bold
 
   .ban-input
-    select
-      width: 60%
-      border-radius: 0.2em
-      border: solid 1px #e9e9e9
+    .b-group
+      .b-1
+        width: 70%
+        padding: 0.5em
+        border-radius: 0.4em 0em 0em 0.4em
+        color: #808080
+        border-top: solid 1px #e9e9e9
+        border-bottom: solid 1px #e9e9e9
+        border-right: solid 0px #e9e9e9
+        border-left: solid 1px #e9e9e9
+
+  .ban-input
+    .b-group
+      .b-2
+        width: 10%
+        padding: 0.5em
+        border-radius: 0em 0.4em 0.4em 0em
+        color: #808080
+        border-top: solid 1px #e9e9e9
+        border-bottom: solid 1px #e9e9e9
+        border-right: solid 1px #e9e9e9
+        border-left: solid 0px #e9e9e9
+
+  .ban-input
+    .b-group
+      .dropdown-menu
+        border-radius: 0.4em
+        border: solid 1px #e9e9e9
+
+  .ban-input
+    .b-group
+      .dropdown-menu
+        .dropdown-item
+          &:hover
+            background-color: #ed1c24 !important
 
 
   .main-cont
@@ -180,19 +443,21 @@
   .main-cont
     .cont-border
       .cont-b
-        border: solid 1px #e9e9e9
+        border: solid 1px #808080
         border-radius: 0.5em
         margin-bottom: 1em
+        width:90%
 
   .main-cont
     .cont-border
       .cont-b
         h1
-          font-size: 1.1em
-          text-align: left
+          font-size: 1.5em
+          text-align: center
+          font-weight: bold
 
   .main-cont
     .cont-border
       .cont-b
         img
-          width: 50%
+          width: 100%
